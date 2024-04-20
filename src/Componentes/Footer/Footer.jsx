@@ -133,7 +133,7 @@ function Footer() {
               }}
               className="footerbotones"
             >
-              Renta de Restaurante
+              Solicita Cotización
             </button>
           </a>
         </div>

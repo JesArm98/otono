@@ -1,35 +1,59 @@
-import { Box, Grid, ThemeProvider, createTheme } from "@mui/material";
-import "./Contacto.css";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { TextField } from "@mui/material";
+import {
+  Box,
+  Grid,
+  ThemeProvider,
+  createTheme,
+  Snackbar,
+  Alert,
+  TextField,
+} from "@mui/material";
 import axios from "axios";
+import "./Contacto.css";
 
 function Contacto() {
+  const [isSending, setIsSending] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
-    const postData = {
-      destino: "Casaotono",
-      email: data.input2,
-      message: data.input4,
-      name: data.input1,
-      phone: data.input3,
-    };
-    const url =
-      "https://us-central1-tvn-api.cloudfunctions.net/app/send-email-casaotono";
+    if (!isSending) {
+      setIsSending(true);
+      setOpenSnackbar(true);
 
-    axios
-      .post(url, postData)
-      .then((response) => {
-        console.log("Respuesta exitosa:", response);
-      })
-      .catch((error) => {
-        console.error("Error en la petición:", error);
-      });
+      const postData = {
+        destino: "Casaotono",
+        email: data.input2,
+        message: data.input4,
+        name: data.input1,
+        phone: data.input3,
+      };
+      const url =
+        "https://us-central1-tvn-api.cloudfunctions.net/app/send-email-casaotono";
+
+      axios
+        .post(url, postData)
+        .then((response) => {
+          console.log("Respuesta exitosa:", response);
+          reset(); // Resetear el formulario
+          setIsSent(true);
+          setTimeout(() => {
+            setIsSending(false);
+            setIsSent(false);
+          }, 10000); // Cambiar el estado del botón después de 20 segundos
+        })
+        .catch((error) => {
+          console.error("Error en la petición:", error);
+          setIsSending(false);
+        });
+    }
   };
 
   const theme = createTheme({
@@ -39,44 +63,45 @@ function Contacto() {
       },
     },
     components: {
-      // Estilo para todos los componentes TextField
       MuiTextField: {
-        defaultProps: {
-          // Puedes definir propiedades por defecto para todos los TextField aquí
-        },
+        defaultProps: {},
         styleOverrides: {
-          root: {
-            // Se aplican estilos a la raíz del TextField
-          },
+          root: {},
         },
       },
       MuiOutlinedInput: {
         styleOverrides: {
           root: {
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-              borderColor: "#582114", // Cambia el color de borde cuando está enfocado
+              borderColor: "#582114",
             },
             "& .MuiOutlinedInput-notchedOutline": {
-              borderColor: "#D45F35", // Cambia esto al color deseado para el borde no enfocado
+              borderColor: "#D45F35",
             },
           },
           notchedOutline: {
-            borderWidth: "1px", // Ajusta el ancho del borde si es necesario
+            borderWidth: "1px",
           },
         },
       },
       MuiInputLabel: {
         styleOverrides: {
           root: {
-            // Estilo para la etiqueta del TextField
             "&.Mui-focused": {
-              color: "#582114", // Cambia el color de la etiqueta cuando está enfocado
+              color: "#582114",
             },
           },
         },
       },
     },
   });
+
+  const handleCloseSnackbar = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpenSnackbar(false);
+  };
 
   return (
     <div id="contacto" className="Contacto">
@@ -315,11 +340,12 @@ function Contacto() {
                     }}
                     className="formuButton"
                     type="submit"
+                    disabled={isSending}
                   >
                     <div
                       style={{ marginTop: "4px", fontFamily: "League Spartan" }}
                     >
-                      Enviar
+                      {isSending ? "Enviando..." : "Enviar"}
                     </div>
                   </button>
                 </Box>
@@ -328,6 +354,15 @@ function Contacto() {
           </Box>
         </Grid>
       </Grid>
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+      >
+        <Alert onClose={handleCloseSnackbar} severity="success">
+          Enviando mensaje...
+        </Alert>
+      </Snackbar>
     </div>
   );
 }

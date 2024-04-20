@@ -178,17 +178,17 @@
         font-size: 1.25rem !important;
     }
     .whatsapp {
-        width: 40.5px;
-        margin: 0 7.3%;
+        width: 40px;
+        margin: 0 7%;
     }
     .facebook {
-        width: 40.5px;
-        margin: 0 7.3%;
+        width: 40px;
+        margin: 0 7%;
        
     }
     .maps {
-        width: 40.5px;
-        margin: 0 7.3%;
+        width: 40px;
+        margin: 0 7%;
         margin-top: 0%;
  
     }
@@ -206,7 +206,7 @@
         margin-top: 20%;
     }
     .redes div{
-        width: 70%;
+        width: 80%;
         margin: auto;        
         align-items: center;
     }
@@ -266,17 +266,17 @@
         font-size: 1.25rem !important;
     }
     .whatsapp {
-        width: 42.5px;
+        width: 40px;
         margin: 0 7.3%;
     }
     .facebook {
-        width: 42.5px;
+        width: 40px;
         margin: 0 7.3%;
         margin-left: 10%;
        
     }
     .maps {
-        width: 42.5px;
+        width: 40px;
         margin: 0 7.3%;
         margin-top: 0%;
  

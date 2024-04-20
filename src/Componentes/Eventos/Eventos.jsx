@@ -20,7 +20,7 @@ function Eventos() {
       </div>
       <a href="#Header">
         <button onClick={openWhatsApp} className="reserva">
-          Solicita Cotizacion
+          Solicita Cotización
         </button>
       </a>
     </div>

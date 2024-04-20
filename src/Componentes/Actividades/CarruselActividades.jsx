@@ -1,13 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { data } from "../../assets/data";
 import "./CarruselActividades.css";
 
-function CarruselActividades() {
+const CarruselActividades = () => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTextos, setCurrentTextos] = useState({});
   const [showMore, setShowMore] = useState(false); // Estado para mostrar el texto adicional
   const [activeButton, setActiveButton] = useState(0); // Estado para mantener el botón activo
+  const [startTouch, setStartTouch] = useState({ x: null, y: null }); // Estado para el inicio del toque
 
   useEffect(() => {
     const listNode = listRef.current;
@@ -41,6 +42,42 @@ function CarruselActividades() {
     }
   };
 
+  const handleTouchStart = (e) => {
+    const touch = e.touches[0];
+    setStartTouch({
+      x: touch.clientX,
+      y: touch.clientY,
+    });
+  };
+
+  const handleTouchMove = (e) => {
+    if (!startTouch.x || !startTouch.y) {
+      return;
+    }
+
+    const touch = e.touches[0];
+    const deltaX = touch.clientX - startTouch.x;
+    const deltaY = touch.clientY - startTouch.y;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      // movimiento horizontal
+      if (deltaX > 0) {
+        // Swipe hacia la derecha
+        if (currentIndex > 0) {
+          setCurrentIndex(currentIndex - 1);
+        }
+      } else {
+        // Swipe hacia la izquierda
+        if (currentIndex < data.length - 1) {
+          setCurrentIndex(currentIndex + 1);
+        }
+      }
+    }
+
+    // Resetear después del movimiento para prepararse para el siguiente swipe
+    setStartTouch({ x: null, y: null });
+  };
+
   return (
     <div className="main-container">
       <h1 className="tituloEstancias">Actividades</h1>
@@ -50,7 +87,11 @@ function CarruselActividades() {
         socialización y promover un envejecimiento activo y pleno.
       </p>
 
-      <div className="slider-container">
+      <div
+        className="slider-container"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+      >
         <div className="container-images">
           <ul ref={listRef}>
             {data.map((item, index) => (
@@ -97,6 +138,6 @@ function CarruselActividades() {
       </div>
     </div>
   );
-}
+};
 
 export default CarruselActividades;
