@@ -18,6 +18,7 @@
   width: 90vw;
   margin: auto;
   height: 170vh ;
+  
 }
 .textoImagenText {
   width: 80vw;
@@ -378,7 +379,8 @@ z-index: 1006;
       margin-top: 10%; /* Ajusta según sea necesario */
     }   
     .main-container .textos-card{
-      top:-89.5vh;
+      height: 80vh;
+      top:-89.4vh;
     }
     .container-images ul li img{
       margin-top: 0%;

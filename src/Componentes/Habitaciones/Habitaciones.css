@@ -209,6 +209,10 @@ max-height: 250px;
       display:inline;
       font-size: 2rem !important;
   }
+  .MenuMovil{
+    margin-top: 50px ;
+    margin-right: 48px ;
+}
   .TitulosCentrados{
     font-size: 2.5rem;
     margin-top: 5%;

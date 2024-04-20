@@ -43,8 +43,6 @@
     color: #000000;
 }
 
-
-
 @media (min-width: 769px) and (max-width: 1023px){
     .descObjetivo {
         padding-left: 0px;
@@ -83,6 +81,9 @@
         margin-top: 5% !important;
         margin-bottom: 5% !important;
     }
+    .customLi {
+        width: auto !important;
+    }
 }
 
 @media  (max-width: 320px){
@@ -119,10 +120,9 @@
     font-size: 1.25rem;
     font-weight: 300 !important;
     
-   
-    
-    
-    
+    }
+    .customLi {
+        width: auto !important;
     }
 }
 /* Para pantallas menores a 480px */
@@ -150,19 +150,18 @@
     .lista li {
     margin: 10px;
     flex-shrink: 0;
-    width: 250px;
+    width: 100%;
     list-style: none;
     color: #000000;
     display: flex;
     align-items: center;
     padding-left: 46px !important;
     font-size: 1.25rem;
-    
-   
-    
-    
-    
     }
+    .customLi {
+        width: auto !important;
+    }
+    
 }
 
 
@@ -195,9 +194,6 @@
     margin-top: 10%;
   }
 
-.customLi {
-    width: 400px !important;
-}
   
 @media (min-width: 1024px) and (max-width:1280px){
     .descObjetivo {

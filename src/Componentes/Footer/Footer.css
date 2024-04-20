@@ -178,22 +178,22 @@
         font-size: 1.25rem !important;
     }
     .whatsapp {
-        width: 42.5px;
+        width: 40.5px;
         margin: 0 7.3%;
     }
     .facebook {
-        width: 42.5px;
+        width: 40.5px;
         margin: 0 7.3%;
        
     }
     .maps {
-        width: 42.5px;
+        width: 40.5px;
         margin: 0 7.3%;
         margin-top: 0%;
  
     }
     .redes{
-        width: 400px;
+        width: auto;
         margin: auto;
         position: absolute;
         flex-direction: column;
@@ -203,10 +203,10 @@
         margin-bottom: -5%;
     }  
     .redes .footerbotones{
-        margin-top: 5%;
+        margin-top: 20%;
     }
     .redes div{
-        width: 60%;
+        width: 70%;
         margin: auto;        
         align-items: center;
     }
@@ -282,7 +282,7 @@
  
     }
     .redes{
-        width: 400px;
+        width: auto;
         margin: auto;
         position: absolute;
         flex-direction: column;
@@ -295,7 +295,7 @@
         margin-top: 10%;
     }
     .redes div{
-        width: 60%;
+        width: 80%;
         margin: auto;        
         align-items: center;
     }
@@ -311,7 +311,7 @@
     .footerbotones{
         width: 100px;
         height: 60px;
-        margin-right: 100px;
+
         font-size: 1rem !important;
         cursor: pointer;
         }
