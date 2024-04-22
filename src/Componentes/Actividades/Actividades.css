@@ -8,7 +8,6 @@
   /* Centrar la imagen de fondo */
   background-position: center;
   /* Establecer una altura para la sección para que el efecto sea más notable */
-  min-height: 100vh;
 }
 
   
@@ -17,7 +16,7 @@
   
   
   
-  @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  @media only screen and (min-width: 1023px) and (max-width: 1280px) {
     /* Estilos para Desktop */
   .actividadesFotos {
       width: 100%;
@@ -30,25 +29,22 @@
       display: absolute;
       align-items: center;
       position: relative; 
-      top: 10%
     }
   .imagenActividades img {
       width: 100%;
-      height: 100%;
       object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
     }
   .imagenesRow {
       display: flex;
       justify-content: space-around;
-      margin: 10%;
+      margin: 0;
       width: 100%;
-      height: 60%;
-      margin-top: 25%;
+      padding-bottom: 50px;
+
     }
   .seccionActividades {
       background-color: #FFFFFF;
       width: 100%;
-      height: 100%;
       position:relative;
       display:flex; /* Convertido en un contenedor flex */
       flex-direction: column; /* Alinear los elementos verticalmente */
@@ -56,9 +52,9 @@
       align-items: center; /* Centrar horizontalmente los elementos */
     }
   .subtituloActividades {
-    position: absolute;
+    position: relative;
     width: 70%;
-    top:17%;
+    margin: 0;
     font-family: 'League Spartan';
     font-style: normal;
     font-weight: 300;
@@ -66,20 +62,20 @@
     font-size: 1.625rem;
     line-height: 130%;
     display: flex;
-
+    padding-bottom: 48.38px;
     align-items: center; /* Centrar horizontalmente los elementos */
     color: #000000;
     }
   .tituloActividades {
-  position: absolute;
+  position: relative;
   font-family: 'League Spartan';
-  top: 5vh;
   font-style: normal;
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 50px;
   color: #582114;
-
+  margin: 0;
+  padding: 48.38px 0;
     }
   .imagenActividades::before {
       content: ""; /* Agrega un pseudo-elemento */
@@ -106,22 +102,23 @@
       z-index: 999;
       padding: 10px;
       text-align: center;
-      width: 100%; /* Ancho del texto */
+      width: auto;
       transition: opacity 0.3s ease; /* Transición suave de opacidad */
       opacity: 1; /* Establece la opacidad predeterminada */
     }
     #imagenActividades4 .original-text{
-      left: 80%;
+      left: 50%;
+      width: auto;
     }
   .imagenActividades:hover .original-text{
       opacity: 1; /* Establece la opacidad a 1 al hacer hover */
       top: 17.5%;
       font-size: 1.4rem !important; 
-      width: 100%;
+      left: 50% !important;
     }
 
     #imagenActividades4:hover .original-text{
-      left: 80%;
+      left: 0;
     }
     .imagenActividades .hola123{
       position: absolute;
@@ -146,7 +143,7 @@
 }
 
 
-@media only screen and  (max-width: 1023px) {
+@media only screen and  (max-width: 1022px) {
     .seccionActividades{
       display: none;
     }
@@ -154,18 +151,21 @@
 
   @media only screen and (min-width: 1281px) {
     /* Estilos para Desktop */
-  .actividadesFotos {
+    .actividadesFotos{
+      width: 90vw;
+      height: auto;
+    }
+  .actividadesFotos2 {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
   .imagenActividades {
-      width: calc(22%); /* Ajusta el ancho de cada imagen */
-      display: absolute;
+      width: calc(18%); /* Ajusta el ancho de cada imagen */
+      display: flex;
       align-items: center;
       position: relative; 
-      top: 10%
     }
   .imagenActividades img {
       width: 100%;
@@ -174,16 +174,15 @@
     }
   .imagenesRow {
       display: flex;
-      justify-content: space-around;
-      margin: 10%;
+      justify-content: space-evenly;
+
       width: 100%;
       height: 60%;
-      margin-top: 25%;
+      margin: 0 !important;
     }
   .seccionActividades {
-      background-color: #FFFFFF;
       width: 100%;
-      height: 100%;
+    padding-bottom: 50px;
       position:relative;
       display:flex; /* Convertido en un contenedor flex */
       flex-direction: column; /* Alinear los elementos verticalmente */
@@ -191,24 +190,25 @@
       align-items: center; /* Centrar horizontalmente los elementos */
     }
   .subtituloActividades {
-    position: absolute;
+    position: relative;
     width: 60%;
-    top:17%;
+    margin: 0;
+    padding: 48.38px;
     font-family: 'League Spartan';
     font-style: normal;
     font-weight: 300;
     text-align: center;
     font-size: 1.625rem;
     line-height: 130%;
-    display: flex;
-
     align-items: center; /* Centrar horizontalmente los elementos */
     color: #000000;
     }
   .tituloActividades {
   position: absolute;
   font-family: 'League Spartan';
-  top: 5vh;
+  padding-top: 48.38px;
+  margin: 0;
+  position: initial;
   font-style: normal;
   font-weight: 500;
   font-size: 2.5rem;
@@ -247,24 +247,24 @@
       opacity: 1; /* Establece la opacidad predeterminada */
     }
     #imagenActividades4 .original-text{
-      left: 70%;
+      left: 72.5%;
     }
 
   .imagenActividades:hover .original-text{
       opacity: 1; /* Establece la opacidad a 1 al hacer hover */
-      top: 20%;
+      top: 10%;
       font-size: 1.625rem !important; 
       width: 95%;
     }
     
     #imagenActividades4:hover .original-text{
-      left: 80%
+      left: 82.5%
     }
 
     .imagenActividades .hola123{
       position: absolute;
       font-size: 1.4rem;
-      top: 35% !important; /* Ajusta la posición vertical según tus necesidades */
+      top: 0; /* Ajusta la posición vertical según tus necesidades */
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;

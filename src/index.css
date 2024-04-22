@@ -4,14 +4,13 @@ html, body {
   width: 100%;
   height: 100vh;
   font-family: 'League Spartan', sans-serif;
-  
+  font-size: 16px;
 }
 
 #root {
   width: 100vw;
   height: 100%;
   font-family: 'League Spartan', sans-serif;
-  
 }
 
 /* html::-webkit-scrollbar, body::-webkit-scrollbar {

@@ -11,10 +11,9 @@ li {
   margin: auto;
   max-width: 500px; /* Ancho máximo para evitar que las imágenes sean demasiado grandes */
   white-space: normal; /* Restablecer el espaciado entre líneas */
-  vertical-align: top; /* Alinear las imágenes en la parte superior */
 }
 .main-container2{
-  height: 150vh !important;
+  height: auto !important;
 }
 .textos-card2::before{
   margin-top: -1%;
@@ -36,10 +35,10 @@ li {
 }
 }
 .main-container2 {
-  margin-top: 10%;
+  padding-bottom: 50px; /* Padding bottom de 50px */
   width: 90vw;
   margin: auto;
-  height: 140vh;
+
 }
 .dots-container2 {
   display: flex;
@@ -57,7 +56,6 @@ li {
 }
 .dot-container-item2.active .boton2 {
   width: 100%;
-  height: 100%;
   top:0;
   background-color: #63301B;
   opacity: 1;
@@ -91,18 +89,14 @@ z-index: 1006;
   position: relative; /* Asegura que los elementos absolutamente posicionados sean relativos a este contenedor */
   width: 100%; /* Ancho completo del contenedor */
   margin: auto;
-  height: 120%;
   overflow: hidden; /* Si es necesario */
-  margin-top: 30%; /* Ajusta según sea necesario */
   display: flex;
 }
 .main-container2 .textos-card2{
   height: 80vh;
-  margin-right: 0px;
-  top:clamp(-89.95vh, -89.65vh, -85.95vh);
+margin-top: -80vh;
 }
 .container-images2 ul li img{
-  margin-top: 15%;
   width: 100%;
   height: 80vh;
 }
@@ -111,7 +105,6 @@ z-index: 1006;
   margin: auto;
   display: relative;
   padding-inline-start: 0px;
-  margin-top: 10%;
   border: none;
 }
 .nuevo-texto2 .texto-imagen-contenedor2{
@@ -124,8 +117,7 @@ z-index: 1006;
 }
 .container-images2 img {
   width: 100%; /* Ancho completo de la imagen */
-  height: 80vh; /* Altura automática para mantener la proporción */
-  margin-top: 12.5%;
+
   display: block;
   position: relative;
   z-index: 1000;
@@ -134,13 +126,13 @@ z-index: 1006;
 .tituloEstancias2 {
   position: relative;
   font-family: 'League Spartan';
-  top: 5%;
+  padding: 48.38px;
   font-style: normal;
   font-weight: 500;
   font-size: 2rem;
   line-height: 50px;
   text-align: center;
-  width: 90%;
+  width: auto;
   margin: auto;
   color: #582114;
   z-index: 1001;
@@ -148,13 +140,14 @@ z-index: 1006;
 .subtituloEstancias2 {
   position: relative;
   width: 100%;
-  top:7.5%;
+  padding-bottom: 48.38px;
   font-family: 'League Spartan';
   font-style: normal;
   font-weight: 300;
   font-size: 1.25rem;
   line-height: 130%;
   display: flex;
+  margin: auto;
   flex-direction: column; /* Alinear los elementos verticalmente */
   align-items: center; /* Centrar horizontalmente los elementos */
   text-align: center;
@@ -166,7 +159,7 @@ z-index: 1006;
   min-width: 100px;
   width: 80vw;
   margin: auto;
-  height: 70%;
+
   font-family: 'League Spartan';
   font-style: normal;
   font-size: 15px;
@@ -204,16 +197,12 @@ z-index: 1006;
   font-style: normal;
   position: relative; /* Ajusta la posición absoluta */
 }
-.main-container2 .slider-container2 .container-images2{
-  margin-top: 10%;
-}
 .textos-card2 {
     position: relative;
     display: flex;
     min-width: 290px;
     max-width: 100%;
     margin: auto;
-    height: 100%;
     font-family: 'League Spartan';
     font-style: normal;
     align-items: center;
@@ -243,7 +232,7 @@ z-index: 1006;
 }
 .textoImagenText2 {
     width: 80vw;
-    height: 15vh;
+    
     font-weight: 300;
     margin-top: 55vh;
     display: flex;
@@ -298,30 +287,25 @@ li {
   margin: auto;
   max-width: 500px; /* Ancho máximo para evitar que las imágenes sean demasiado grandes */
   white-space: normal; /* Restablecer el espaciado entre líneas */
-  vertical-align: top; /* Alinear las imágenes en la parte superior */
 }
-  .main-container2 {
-    height: 150vh;
-  }
   .saber-mas2 {
-    margin-top: 20% !important;
+    margin-top: 10% !important;
   }
-  .container-images2 {
-    height: 100%;
-  }
+
   .main-container2 .textos-card2{
-    top:-90.5vh;
+    margin-top: -81vh;
   }
   .container-images2 ul li img{
-    margin-top: 30%;
+    margin-top: 0;
   }
   .tituloEstancias2 {
     font-size: 1.5rem;
   }
   .subtituloEstancias2 {
-    height: 7.5%;  
-    top: 5%;
+    height: auto;  
+    top: 0;
     font-size: 1.25rem;
+    margin: 0;
     line-height: 130%;
   }
   .original-text2{
@@ -349,6 +333,7 @@ li {
     margin-bottom: 1vh; /* Espacio entre elementos de la lista */
   }
   .textoImagenText2 #h123 {
+    margin-top: -25%;
     margin-bottom: 3vh;
     font-size: 1.25rem;
   }
@@ -367,7 +352,7 @@ li {
   vertical-align: top; /* Alinear las imágenes en la parte superior */
 }
   .main-container2 {
-        height: 125vh;
+        padding-bottom: 48.38px;
   }
   .dot-container-item2 {
         font-size: 20px;
@@ -389,13 +374,14 @@ li {
   .container-images2 {
         width: 80%;
         margin: auto; /* Ancho completo del contenedor */
+        margin-top: 0 !important;
         height: 120%;
   }
   .main-container2 .textos-card2{
-        top:-89.5vh;
+    margin-top: -80vh;
   }
   .container-images2 ul li img{
-        margin-top: 0%;
+        margin-top: 0;
   }
   .tituloEstancias2 {
         font-size: 2.5rem;
@@ -405,7 +391,6 @@ li {
         line-height: 130%;
         width: 90%;
         margin: auto;
-        margin-top: 5%;
   }
   .original-text2{
         font-size: 2rem;
@@ -413,12 +398,9 @@ li {
   .hola1232{
         font-size: 25px;
   }
-  .main-container2 .slider-container2 .container-images2{
-        margin-top: 20%;
-  }
   .textos-card2 {
           max-width: 80%;
-          margin-left: 10%;
+          margin: auto;
   }
   .textoImagenText2 ul {
         width: 80vw;

@@ -4,9 +4,9 @@ import { Box, Container, Typography, Grid } from "@mui/material";
 
 function Habitaciones() {
   const [imagenes, setImagenes] = useState({
-    principal: ".././images/estandar1.jpg",
-    secundaria1: ".././images/estandar2.jpg",
-    secundaria2: ".././images/estandar3.jpg",
+    principal: ".././images/estandar1.webp",
+    secundaria1: ".././images/estandar2.webp",
+    secundaria2: ".././images/estandar3.webp",
   });
   const [seleccionado, setSeleccionado] = useState("Estandar");
   const [label, setLabel] = useState("Estandar");
@@ -41,25 +41,25 @@ function Habitaciones() {
   const images = [
     {
       label: "Estandar",
-      principal: ".././images/estandar1.jpg",
-      secundaria1: ".././images/estandar2.jpg",
-      secundaria2: ".././images/estandar3.jpg",
+      principal: ".././images/estandar1.webp",
+      secundaria1: ".././images/estandar2.webp",
+      secundaria2: ".././images/estandar3.webp",
       textoImagen:
         "Incluye: Baño privado, telefonía, internet, TV con cable, aire acondicionado.",
     },
     {
       label: "Mini suite",
-      principal: ".././images/minisuite1.jpg",
-      secundaria1: ".././images/minisuite2.jpg",
-      secundaria2: ".././images/minisuite3.jpg",
+      principal: ".././images/minisuite1.webp",
+      secundaria1: ".././images/minisuite2.webp",
+      secundaria2: ".././images/minisuite3.webp",
       textoImagen:
         "Incluye: Baño privado, telefonía, internet, TV con cable, aire acondicionado, sala recibidor",
     },
     {
       label: "Duplex",
-      principal: ".././images/duplex1.jpg",
-      secundaria1: ".././images/duplex2.jpg",
-      secundaria2: ".././images/duplex3.jpg",
+      principal: ".././images/duplex1.webp",
+      secundaria1: ".././images/duplex2.webp",
+      secundaria2: ".././images/duplex3.webp",
       textoImagen:
         "Incluye: Baño privado, telefonía, internet, TV con cable, aire acondicionado, sala recibidor (compartida)",
     },
@@ -225,7 +225,6 @@ function Habitaciones() {
             className="MenuMovil"
             style={{
               color: "#DD927A",
-              fontSize: "5rem",
               display: "flex",
               justifyContent: "space-around",
               width: "100%",

@@ -73,10 +73,10 @@ const MobileMenu = () => {
 
   const menuItems = [
     { name: "Nosotros", href: "#objetivo" },
-    { name: "Estancias", href: "#estancias" },
+    { name: "Estancias", href: "#estancias2" },
     { name: "Habitaciones", href: "#habitaciones" },
     { name: "Instalaciones", href: "#instalaciones" },
-    { name: "Actividades", href: "#actividades" },
+    { name: "Actividades", href: "#actividades2" },
     { name: "Contacto", href: "#contacto" },
   ];
 

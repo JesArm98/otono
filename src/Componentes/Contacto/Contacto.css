@@ -42,39 +42,94 @@
   margin-top: 6%;
 }
 @media only screen and ( max-width: 320px){
+
+  .CajaForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
   .textoCont{
     font-size: 1.25rem;
     width: 80%;
     margin: auto;
   }
-  .nuestroObjetivo{
-    font-size: 1.5rem;
+
+  #ubicacion {
+    margin-top: 0 !important;
   }
-  .cale123{
-    width: 100%;
-    margin-left: -20%;
+
+  #whatsapp {
+    margin-top: 8px !important;
   }
+
+  #textoWhats{
+    margin-bottom: 0% !important;
+  }
+
   .formuButton{
+    width: auto !important;
+    margin-left: 0% !important;
+    margin-bottom: 4% !important;
+    margin-top:  2% !important;
+  }
+  .formuButton div{
+    font-size: 1.25rem;
+  }
+ 
+  .Formulario{
+    margin-top: 1% !important;
+  }
+
+  .cajaComoLlegar{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  #obCont{
+      max-height: 250px;
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 300;
+
+    line-height: 130%;
+    text-align: "center";
+    display: flex;
     align-items: center;
-    width: 100%;
-  }
-  .cale123 .formuButton {
-    margin-left: 0%;
-    width: 90% !important;
-  }
-  .cale123 .formuButton .textoCont{
-    margin-top: 10px !important;
-    margin-left: 5px;
-  }
-  .cale123 .textoCont {
-    margin-left: 0px;
-  }
-  .iconoCon{
-    margin-left: -7.5px;
-  }
-  .descObjetivo{
-    margin-top: 0% !important;
-  }
+    text-align: center;
+
+    color: #000000;
+}
+
+.textoIcono{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0 !important;
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 300;
+font-size: 1.25rem !important;
+line-height: 30px;
+/* or 136% */
+display: flex;
+align-items: center;
+text-align: center;
+width: 80%;
+}
+
+.iconoCon{
+  height: 23.73px;
+  width: 23.73px;
+  padding: 16px;
+}
+
+
+  
 }
 @media only screen and ( min-width: 321px)  and (max-width: 599px)  {
 
@@ -163,9 +218,9 @@ text-align: center;
 
   
 }
-@media only screen and (min-width: 767px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1022px) {
   .textoCont{
-    margin-left: 10%;
+    padding-left: 35px;
     font-size: 1.35rem;
   }
   .formuButton div{
@@ -183,19 +238,29 @@ text-align: center;
     margin-left: -10%;
   }
   .cale123 .textoCont{
-    margin-left: 0%;
+
     line-height: 100%;
   }
   .Formulario{
-    margin-top: 20%;
+    padding-top: 100px !important;
+  }
+  .formuButton{
+    margin-bottom: 50px !important;
+    margin-top: 50px !important;
   }
   .nuestroObjetivo{
-    margin-top: 10% !important;
+     padding-top: 48.38x !important;
+     padding-left: 0;
+     width: auto ;
+     display: flex;
+     margin: 0 ;
+     align-items: center !important;
+     align-content: center !important;
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1280px){
   .textoCont{
-    margin-left: 10%;
+    margin-left: 0;
     font-size: 1.4rem;
   }
   .formuButton div{
@@ -207,6 +272,8 @@ text-align: center;
   }
   #obCont{
     width: 80%;
+    margin: 0 !important;
+    padding-bottom: 30px;
   }
   .cale123{
     width: 100%;
@@ -216,12 +283,13 @@ text-align: center;
     margin-left: 0%;
   }
   .Formulario{
-    margin-top: 10%;
+    margin: 0;
   }
+
 }
 @media only screen and (min-width: 1281px){
     .textoCont{
-    margin-left: 10%;
+    margin-left: 80px;
     font-size: 1.5rem;
   }
   .formuButton div{
@@ -233,7 +301,14 @@ text-align: center;
   }
   #obCont{
     width: 80%;
+    margin: 0 !important;
   }
+ 
+  #obCont .textoCont {
+    margin: 0;
+    padding: 0 0 30px 80px;
+  }
+
   .cale123{
     width: 100%;
     margin-left: 0%;
@@ -241,7 +316,12 @@ text-align: center;
   .cale123 .textoCont{
     margin-left: 0%;
   }
+  .nuestroObjetivo{
+    padding: 48.38px 80px !important;
+    margin: 0 !important;
+  }
   .Formulario{
-    margin-top: 7.5%;
+    margin: 0;
+    padding-top: 100px !important;
   }
 }

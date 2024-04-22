@@ -1,7 +1,6 @@
 .Instalaciones{
     background-color: #FCF9F5;
     width: 100%;
-     height: 880px;
      min-height: 80px !important;
     position:relative;
     display: flex;
@@ -39,50 +38,56 @@
     transform: scale(0.91); /* Imágenes adyacentes */
     margin: 0 0px; /* Espacio respecto a la central */
   }
-
-  @media (min-width: 481px) and (max-width: 884px) {
-    .carruselCont{
-      width: 100% !important 
-    }
-
+  
+  @media (min-width: 600px) and (max-width:1105px){
     #TituloInstalaciones{
-      margin-top: 7.5% !important;
+       padding-top: 48.38px !important;
+       margin: 0 !important;
     }
     #descripcionInsta{
-      margin-top: 0% !important;
+
+      padding-bottom: 48.38px;
+      width: 70% !important;
+      margin: 0 !important;
+    }
+    .carruselCont{
+      width: 100% !important;
+      padding-bottom: 48.38px !important;
     }
   }
-  
-  
-  @media (min-width: 885px) and (max-width:1280px){
+  @media (min-width: 1106px) and (max-width:1280px){
     #TituloInstalaciones{
-      margin-top: 5% !important;
+       padding-top: 48.38px !important;
+       margin: 0 !important;
     }
     #descripcionInsta{
-      margin-top: 2.5% !important;
-      width: 60% !important;
+      padding-bottom: 48.38px;
+      margin: 0 !important;
+      width: 70% !important;
     }
     .carruselCont{
-      width: 100% 
+      width: 90% !important;
+      padding-bottom: 48.38px !important;
     }
   }
 
   @media (min-width:1281px){
     #TituloInstalaciones{
-      margin-top: 2% !important;
+      padding-top: 48.38px;
     }
     #descripcionInsta{
       width: 60% !important;
     }
     .Instalaciones{
-      height: 100vh;
+      padding-bottom: 50px;
     }
   }
   
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
    #TituloInstalaciones{
-    margin-top: 10% !important;
+    padding: 48.38px !important;
+    margin: 0;
    }
     .texto1 {
       font-size: 8.5vw; /* Aún más grande para pantallas muy pequeñas */
@@ -94,15 +99,8 @@
         margin:auto ;
         
     }
-
-    .Instalaciones{
-      
-      height: 820px;
-    }
-
     #descripcionInsta{
-      margin-top: 40px !important;
-      margin-bottom: 10px !important;
+    margin: 0 !important;
       font-size: 1.25rem;
     width: 90% !important;
 
@@ -111,15 +109,9 @@
 
     .carruselCont{
       width: 100% !important;
+      padding-top: 50px;
+      padding-bottom: 10px;
     }
-    
-
-    
-
-
-
-
-    
   }
 
   

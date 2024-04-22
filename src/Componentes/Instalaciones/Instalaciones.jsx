@@ -30,7 +30,7 @@ function Instalaciones() {
             textAlign: "center", // Justifica el texto
             margin: "0 auto", // Centra el bloque de texto horizontalmente
             height: "auto",
-            marginBottom: "1.6%",
+            marginBottom: "48px",
           }}
           className="descCentrada"
         >
@@ -55,31 +55,31 @@ function Instalaciones() {
           interval={2400}
         >
           <div>
-            <img src=".././images/PNG Objetivo/alberca.jpg" />
+            <img src=".././images/PNG Objetivo/alberca.webp" />
             <p className="legend">Alberca</p>
           </div>
           <div>
-            <img src=".././images/PNG Objetivo/biblioteca.jpg" />
+            <img src=".././images/PNG Objetivo/biblioteca.webp" />
             <p className="legend">Biblioteca</p>
           </div>
           <div>
-            <img src=".././images/PNG Objetivo/capilla.jpg" />
+            <img src=".././images/PNG Objetivo/capilla.webp" />
             <p className="legend">Capilla</p>
           </div>
           <div>
-            <img src=".././images/PNG Objetivo/restaurante.jpg" />
+            <img src=".././images/PNG Objetivo/restaurante.webp" />
             <p className="legend">Restaurante</p>
           </div>
           <div>
-            <img src=".././images/PNG Objetivo/gimnasio.jpg" />
+            <img src=".././images/PNG Objetivo/gimnasio.webp" />
             <p className="legend">Gimnasio</p>
           </div>
           <div>
-            <img src=".././images/PNG Objetivo/jardin.jpg" />
+            <img src=".././images/PNG Objetivo/jardin.webp" />
             <p className="legend">Jardin</p>
           </div>
           <div>
-            <img src=".././images/PNG Objetivo/spa.jpg" />
+            <img src=".././images/PNG Objetivo/spa.webp" />
             <p className="legend">Spa</p>
           </div>
         </Carousel>

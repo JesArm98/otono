@@ -26,15 +26,18 @@
 .TitulosCentradosMovile{
     display:inline;
     font-size: 1.25rem !important;
-    margin-bottom: 10% !important;
+    margin: 0 !important;
+    padding: 30px 0 20px 0;
 }
 .Habitaciones{
-    height: 135%;  
+    height: auto;  
 
 }
 
 .TitulosCentrados{
     font-size: 2rem;
+    margin: 0;
+    padding: 48.38px;
 }
 .Incluye{
     width: 90% ;
@@ -55,13 +58,14 @@
 .MenuMovil{
     margin-top: 50px ;
     margin-right: 48px ;
+    padding-bottom: 48.38px;
 }
 #desHab{
-max-height: 250px;
   font-family: 'League Spartan';
   font-style: normal;
   font-weight: 300;
   width: 90%;
+  margin: 0;
   font-size: 1.25rem; /* Tamaño predeterminado */
   line-height: 130%;
   text-align: "center";
@@ -86,17 +90,18 @@ max-height: 250px;
   .TitulosCentradosMovile{
       display:inline;
       font-size: 1.25rem !important;
-      margin-bottom: 10% !important;
-  }
-  .Habitaciones{
-      height: 130%;  
-  
+      margin: 0 !important;
+      padding: 30px 0 20px 0;
   }
   
   .TitulosCentrados{
       font-size: 2rem;
-      margin-top: 10%;
+      margin: 0;
+      padding: 48.38px;
   }
+  .css-wd3bf8{
+    height: auto !important;
+}
   .Incluye{
       width: 90% ;
       margin: auto !important;
@@ -114,15 +119,17 @@ max-height: 250px;
           flex-direction: column;
   }
   .MenuMovil{
-      margin-top: 50px ;
+      margin-top: 20px ;
       margin-right: 48px ;
+      padding-bottom: 48.38px;
   }
   #desHab{
-  max-height: 250px;
     font-family: 'League Spartan';
     font-style: normal;
     font-weight: 300;
     width: 90%;
+    margin: 0;
+    padding-bottom: 20px;
     font-size: 1.25rem; /* Tamaño predeterminado */
     line-height: 130%;
     text-align: "center";
@@ -147,14 +154,15 @@ max-height: 250px;
     .TitulosCentradosMovile{
         display:inline;
         font-size: 1.5rem !important;
+        margin: 0 !important;
     }
     .TitulosCentrados{
         font-size: 1.5rem;
-        margin-top: 10%;
+        margin: 0;
+        padding: 48.38px;
     }
     .Habitaciones{
-        height: 150%;  
-        height: 185vh; 
+        height: auto; 
     }
     .Incluye{
         width: 100% ;
@@ -173,14 +181,19 @@ max-height: 250px;
             flex-direction: column;
     }
     .MenuMovil{
-        margin-top: 50px ;
+        margin-top: 20px ;
         margin-right: 48px ;
+        padding-bottom: 48.38px;
+    }
+    .css-wd3bf8{
+        height: auto !important;
     }
     #desHab{
-    max-height: 250px;
       font-family: 'League Spartan';
       font-style: normal;
       font-weight: 300;
+      margin: 0;
+      padding-bottom: 48.38px;
       font-size: 1.25rem; /* Tamaño predeterminado */
       line-height: 130%;
       text-align: "center";
@@ -198,24 +211,26 @@ max-height: 250px;
     }
 }
 
-@media (min-width:600px) and (max-width:1023px){
+@media (min-width:600px) and (max-width:1022px){
     .Menu {
         display: none !important;
     }
-    .Habitaciones{
-        height: 115vh;
-    }
+
   .TitulosCentradosMovile{
       display:inline;
       font-size: 2rem !important;
+      margin: 0 !important;
+      padding-bottom: 20px;
   }
   .MenuMovil{
-    margin-top: 50px ;
+    margin-top: 30px ;
     margin-right: 48px ;
+    padding-bottom: 48.38px;
 }
   .TitulosCentrados{
     font-size: 2.5rem;
-    margin-top: 5%;
+    padding: 48.38px 0;
+    margin: 0;
   }
   .Incluye{
       width: 100% ;
@@ -228,11 +243,15 @@ max-height: 250px;
   }
   .cajaCompleta {
           flex-direction: column;
-          margin-top: -10%;
+          height: auto !important;
+          padding-bottom: 10px;
+
   }
 
   .descCentrada{
     width: 90%;
+    margin: 0;
+    padding-bottom: 48.38px;
     text-align: center;
     font-size: 1.625rem !important;
     line-height: 130%;
@@ -251,7 +270,6 @@ max-height: 250px;
     color: #000000;
   }
   .ImagenContainer{
-    margin-top: 80% !important;
     padding: 12.5px;
 }
 .ImagenContainer #secundaria1,
@@ -260,54 +278,84 @@ max-height: 250px;
 }
 }
  
-  @media (min-width: 1024px) and (max-width:1280px) {
+  @media (min-width: 1023px) and (max-width:1277px) {
  .MenuMovil{
     display: none !important ;
  }
  .Menu{
-    padding-left: 12.5% !important;
+    padding-left: 10% !important;
+    margin-top: -5%;
  }
  .descCentrada{
     width: 60%;
-    margin-top: 5%;
+    margin: 0;
     text-align: center;
     font-size: 1.625rem;
     line-height: 130%;
+    padding-bottom: 48.38px;
+
  }
  .TitulosCentrados{
-    margin-top: 5%;
+    padding: 48.38PX;
+    margin: 0;
     font-size: 2.5rem;
  }
- .ImagenContainer {
-    width: 100%;
- }
  .Habitaciones{
-    height: 140vh;
+    padding-bottom: 50px;
+    height: auto;
  }
  .Incluye{
     font-size: 1.25rem !important;
  }
+.ImagenHabitacion{
+    width: 60%;
 }
 
-@media (min-width: 1281px) {
+#principal{
+
+    width: 90%;
+    height: 60% !important;
+
+}
+#secundaria1{
+    margin-top: -40%;
+    width: 90%;
+}
+#secundaria2{
+    margin-top: -40%;
+    width: 90%;
+    margin-left: -10%;
+}
+.css-wd3bf8{
+    height: auto !important;
+    padding-bottom: 90px;
+}
+}
+
+@media (min-width: 1279px) {
     .MenuMovil{
        display: none !important ;
     }
    .TitulosCentrados{
     font-size: 2.5rem;
-    margin-top: 2.5%;
+    padding: 48.38px;
+    margin: 0;
    }
     .descCentrada{
-       width: 60%;
+       width: auto;
        text-align: center;
        font-size: 1.625rem;
        line-height: 130% !important;
+       margin: 0;
     }
     .ImagenContainer {
-       width: 100%;
+       width: auto;
     }
     .Habitaciones{
-       height: 110vh;
+      padding-bottom: 50px;
+    }
+    .css-wd3bf8{
+        height: auto !important;
     }
    }
 

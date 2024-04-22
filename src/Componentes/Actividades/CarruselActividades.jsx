@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { data } from "../../assets/data";
 import "./CarruselActividades.css";
 
@@ -79,7 +79,7 @@ const CarruselActividades = () => {
   };
 
   return (
-    <div className="main-container">
+    <div id="actividades2" className="main-container">
       <h1 className="tituloEstancias">Actividades</h1>
       <p className="subtituloEstancias">
         Descubre cómo enriquecemos la vida de nuestros residentes a través de
@@ -101,6 +101,26 @@ const CarruselActividades = () => {
             ))}
           </ul>
         </div>
+        <div className="textos-card">
+          {/* Renderiza original-text y hola123 cuando showMore es false */}
+          {!showMore && (
+            <div>
+              <div className="original-text">{currentTextos.originalText}</div>
+            </div>
+          )}
+          {/* Mostrar el nuevo texto solo cuando se presione el botón */}
+          {showMore && (
+            <div className="nuevo-texto">
+              {/* Renderizar la lista de servicios */}
+              <div className={`textoImagenText${showMore ? "" : "hidden"}`}>
+                {currentTextos.textoImagenText}
+              </div>
+            </div>
+          )}
+          <button className="saber-mas2" onClick={handleShowMore}>
+            {showMore ? "Mostrar menos" : "Saber más"}
+          </button>
+        </div>
         <div className="dots-container">
           {data.map((_, idx) => (
             <div
@@ -114,27 +134,6 @@ const CarruselActividades = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      <div className="textos-card">
-        {/* Renderiza original-text y hola123 cuando showMore es false */}
-        {!showMore && (
-          <div>
-            <div className="original-text">{currentTextos.originalText}</div>
-          </div>
-        )}
-        {/* Mostrar el nuevo texto solo cuando se presione el botón */}
-        {showMore && (
-          <div className="nuevo-texto">
-            {/* Renderizar la lista de servicios */}
-            <div className={`textoImagenText${showMore ? "" : "hidden"}`}>
-              {currentTextos.textoImagenText}
-            </div>
-          </div>
-        )}
-        <button className="saber-mas2" onClick={handleShowMore}>
-          {showMore ? "Mostrar menos" : "Saber más"}
-        </button>
       </div>
     </div>
   );

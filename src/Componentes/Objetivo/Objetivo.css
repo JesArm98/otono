@@ -27,9 +27,9 @@
 }
 
 .descObjetivo {
-    padding-left: 80px;
-    max-width: 926px;
-    max-height: 250px;
+
+
+
     font-family: 'League Spartan';
     font-style: normal;
     font-weight: 300;
@@ -43,7 +43,7 @@
     color: #000000;
 }
 
-@media (min-width: 769px) and (max-width: 1023px){
+@media (min-width: 768px) and (max-width: 1022px){
     .descObjetivo {
         padding-left: 0px;
         width: 80%;
@@ -59,16 +59,12 @@
     }
 
     .nuestroObjetivo {
-        width: 80%;
-        margin: auto;
-        height: 52px;
-        padding-left: 0px;
-        padding-top: 0px;
-        margin-top: 5%;
-        margin-bottom: 5%;
+        margin: auto !important;
+        padding: 48.38px 0;
         font-size: 2.5rem;
         text-align: center;
         align-items: center;
+        display: flex;
 
     }
 
@@ -91,19 +87,20 @@
         font-size: 1.25rem !important; /* Tamaño aún más pequeño para pantallas muy pequeñas */
        width: 80%;
        margin: auto;
-       margin-top: 15% !important;
+
        text-align: center;
-       padding-left: 0px !important;
+
     }
     .nuestroObjetivo {
         /* Nuestro objetivo */
     display: flex;
     justify-content: flex;
-    padding-left: 0px;
+    padding: 48.38px 0;
+    margin: 0 !important;
     justify-content: center;
-    width: 100%;
+    width: auto;
     font-size: 1.5rem;
-    margin-top: 5%;
+
     
     
    
@@ -131,7 +128,6 @@
         font-size: 1.25rem !important; /* Tamaño aún más pequeño para pantallas muy pequeñas */
        width: 80%;
        margin: auto;
-       margin-top: 10%;
        text-align: center;
        padding-left: 0px !important;
     }
@@ -139,11 +135,11 @@
         /* Nuestro objetivo */
     display: flex;
     justify-content: flex;
-    padding-left: 0px;
+    margin: 0;
     justify-content: center;
-    width: 100%;
+    width: auto;
     font-size: 2rem;
-    
+padding: 48.38px 0;
     
    
     }
@@ -195,11 +191,11 @@
   }
 
   
-@media (min-width: 1024px) and (max-width:1280px){
+@media (min-width: 1023px) and (max-width:1280px){
     .descObjetivo {
-        padding-left: 0px;
+        padding: 0 0 0 70px;
         width: 80%;
-        margin: auto;
+        margin: 0;
         font-style: normal;
         font-weight: 300;
         font-size: 1.625rem;
@@ -212,12 +208,9 @@
 
     .nuestroObjetivo {
         width: 80%;
-        margin: auto;
         height: 52px;
-        padding-left: 0px;
-        padding-top: 0px;
-        margin-top: 5%;
-        margin-bottom: 5%;
+        padding: 48.38px 0 48.38px 70px !important;
+        margin: 0;
         font-size: 2.5rem;
         text-align: center;
         align-items: center;

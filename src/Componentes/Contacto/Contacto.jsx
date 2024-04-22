@@ -108,9 +108,7 @@ function Contacto() {
       <Grid container spacing={4}>
         <Grid item xs={12} sm={6}>
           <Box>
-            <div style={{ marginBottom: "30px" }} className="nuestroObjetivo">
-              Contacto
-            </div>
+            <div className="nuestroObjetivo">Contacto</div>
 
             <div
               style={{
@@ -132,7 +130,7 @@ function Contacto() {
                   marginBottom: "30px",
                 }}
               >
-                <div className="textoCont" style={{ marginTop: "4px" }}>
+                <div className="textoCont">
                   En Casa Otoño, nos encantaría resolver todas tus preguntas. No
                   dudes en ponerte en contacto con nosotros.
                 </div>
@@ -339,6 +337,7 @@ function Contacto() {
                       fontWeight: "400",
                     }}
                     className="formuButton"
+                    id="enviar"
                     type="submit"
                     disabled={isSending}
                   >

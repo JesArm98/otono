@@ -1,7 +1,7 @@
 export const data2 = [
     {
       id: 1, 
-      imgUrl2: ".././images/estancia1 1.png", 
+      imgUrl2: ".././images/estancia1 1.webp", 
       textos2: {
         originalText2: "Temporal",
         hola123Text2: "Tu decides los dias de estancia, sin dejar de disfrutar los servicios.",
@@ -10,7 +10,7 @@ export const data2 = [
     },
     {
       id: 2, 
-      imgUrl2: ".././images/estancia2 1.png",
+      imgUrl2: ".././images/estancia2 1.webp",
       textos2: {
         originalText2: "Casa de Dia",
         hola123Text2: "Estancia de 4 a 12 horas con horario abierto de entrada y salida.",
@@ -19,7 +19,7 @@ export const data2 = [
     },
     {
       id: 3, 
-      imgUrl2: ".././images/estancia3 1.png",
+      imgUrl2: ".././images/estancia3 1.webp",
       textos2: {
         originalText2: "Permanente",
         hola123Text2: "Descubre la calidad de vida plena para adultos mayores con cuidado integral.",

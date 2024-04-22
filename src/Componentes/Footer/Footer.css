@@ -5,7 +5,7 @@
     position: absolute;
     width: 80%;
     left: 50%; /* Centra horizontalmente */
-    top: 85%; /* Centra verticalmente */
+    top:90%; /* Centra verticalmente */
     transform: translate(-50%, -50%); /* Centra completamente */
     font-family: 'League Spartan';
     font-style: normal;
@@ -22,11 +22,11 @@
     width: 12vw;
     background-color: transparent;
     border-radius: 15px;
-    margin-top: 5vh;
     font-size: 1rem;
     border:1px solid #D45F35;
     color: #D45F35;
-    height: 6vh;
+    height: 50px;
+    margin-bottom: 20px;
     margin-top: 5%;
     cursor: pointer;
 }
@@ -36,15 +36,13 @@
 }
 .footerLogo {
         width: 300px;
-        height: 150px;
-        position: relative;
-        display: flex;
-        margin-top: -20%;
+        height: 120px;
+
+
 }
 .footer-container {
         background-color: #FCF9F5;
         width: 100%;
-        min-height: 35%; /* Cambia height a min-height para que siempre tenga al menos esta altura */
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -53,14 +51,15 @@
 }
 .footerList1 {
         display: flex;
-        height: 15vh;
+        padding-bottom: 48.38px;
         justify-content: space-around;
         flex-direction: column;
         text-align: center;
         align-items: center;
         position: relative;
         padding-inline-start: 0px;
-        margin-top: -2%;
+        
+        margin: 0 !important;
 }
 .footerList2 {
         display: flex;
@@ -70,8 +69,9 @@
         align-items: center;
         position: relative;
         padding-inline-start: 0px;
-        height: 15vh;
-        margin-top: -2%;
+
+        margin: 5% !important;
+                padding-bottom: 48.38px;
 }
 .footerList1 li {
         font-family: 'League Spartan';
@@ -119,9 +119,9 @@
 }
 .redes{
     width: 12vw;
-    height: 10vh;
+    padding-top: 48.38px;
     position: relative;
-    margin-top: -1%;
+    margin: 0;
    
 }
 
@@ -156,7 +156,7 @@
         width: 60vw;
         margin:auto;
         height: 20vh;
-        top: 47.5% !important;
+        top: 45.5% !important;
         position: absolute;
     }
     .footerList1 li {
@@ -179,16 +179,16 @@
     }
     .whatsapp {
         width: 40px;
-        margin: 0 7%;
+        margin: 0 7.3%;
     }
     .facebook {
         width: 40px;
-        margin: 0 7%;
+        margin: 0 9%;
        
     }
     .maps {
         width: 40px;
-        margin: 0 7%;
+        margin: 0 7.3%;
         margin-top: 0%;
  
     }
@@ -200,7 +200,7 @@
         margin-top: 350px;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: -5%;
+        margin-bottom: -30%;
     }  
     .redes .footerbotones{
         margin-top: 20%;
@@ -237,14 +237,14 @@
         width: 60vw;
         margin:auto;
         height: 20vh;
-        top: 30%;
+        top: 25%;
         position: absolute;
     }
     .footerList2 {
         width: 60vw;
         margin:auto;
         height: 20vh;
-        top: 47% !important;
+        top: 42% !important;
         position: absolute;
     }
     .footerList1 li {
@@ -289,7 +289,7 @@
         margin-top: 350px;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: -20%;
+        margin-bottom: -30%;
     }  
     .redes .footerbotones{
         margin-top: 10%;
@@ -303,62 +303,55 @@
 }
  
 @media only screen and (min-width: 600px) and (max-width: 1023px) {
-.hola {
-        top: 75%; /* Centra verticalmente */
-        font-size: 20px;
-        line-height: 1.1;
-}
+
     .footerbotones{
         width: 100px;
-        height: 60px;
-
         font-size: 1rem !important;
         cursor: pointer;
+        margin-bottom: 0;
         }
     .footerLogo {
+        padding-top: 40px;
             width: 149px;
-            height: 130px;
+            height: 150px !important;
+            margin: 0;
         }
     .footer-container {
             width: 100vw;
-            min-height: 45vh; /* Cambia height a min-height para que siempre tenga al menos esta altura */
+            padding-bottom: 50px;
         }
-       
+    .footer-container .hola{
+        font-size: 20px;
+        line-height: 1.1;
+        
+    }
     .footerList1{
-            height: 13vh;
-        }
+        padding-top: 40px;
+        margin: 0;
+        padding-bottom: 20px;   
+    }
        
     .footerList2{
-            height: 13vh;
+        padding-top: 40px;
+        margin: 0;
+padding-bottom: 20px;
         }
        
     .footerList1 li {
+        
         font-size: 1.625rem;
             line-height: 21px;
         }
         .footerList2 li {
             font-size: 1.625rem;
             line-height: 21px;
-        }
- 
-    .whatsapp {
-        height: 6vh;
-    }
- 
-    .facebook {
-        height: 6vh;
-    }
- 
-    .maps {
-        height: 6vh;
-    }
- 
+        } 
     .redes{
         width: 12vw;
         position: relative;
         flex-direction: column;
-        margin-top: 5%;
         justify-content: space-around;
+        padding-top: 40px;
     }
 }
  

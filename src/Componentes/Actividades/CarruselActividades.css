@@ -14,11 +14,9 @@
   }
 }
 .main-container {
-  margin-top: 10%;
   width: 90vw;
   margin: auto;
-  height: 170vh ;
-  
+  padding-bottom: 48.38px;
 }
 .textoImagenText {
   width: 80vw;
@@ -44,7 +42,7 @@
 .tituloEstancias {
   position: relative;
   font-family: 'League Spartan';
-  top: 2.5%;
+  padding: 48.38px 0;
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
@@ -117,52 +115,42 @@ z-index: 1006;
  position: relative; /* Asegura que los elementos absolutamente posicionados sean relativos a este contenedor */
  width: 100%; /* Ancho completo del contenedor */
  margin: auto;
- height: 120%;
  overflow: hidden; /* Si es necesario */
- margin-top: clamp(4vh, 10%, 15%); /* Ajusta según sea necesario */
  display: flex;
 }
 .main-container .textos-card{
  height: 80vh;
  margin-right: 0px;
- top:-90.5vh;
-}
-.container-images ul li img{
- margin-top: 10%;
+ top:0 !important;
 }
 .container-images ul {
  width: 100%;
  margin: auto;
  display: relative;
  padding-inline-start: 0px;
- margin-top: 10%;
  border: none;
 }
 .container-images img {
  width: 100%; /* Ancho completo de la imagen */
  height: 80vh; /* Altura automática para mantener la proporción */
- margin-top: 12.5%;
  display: block;
- position: relative;
+ position: initial;
  z-index: 1000;
 }
-.main-container .slider-container .container-images{
- margin-top: 10%;
-}
+
 .textos-card {
  position: relative;
  display: flex;
  min-width: 290px;
  max-width: 100%;
  margin: auto;
- height: 100%;
  font-family: 'League Spartan';
  font-style: normal;
  align-items: center;
  text-align: center;
  flex-direction: column; /* Alinear los elementos verticalmente */
  color: #FFFFFF;
- top: 0;
+ margin-top: -80vh;
  left: 0;
  right: 0;
  bottom: 0;
@@ -185,12 +173,12 @@ z-index: 1006;
 }
 .subtituloEstancias{
  position: relative;
- width: 95%;
- margin: 2.5%; 
- top: 5% ;
+margin: 0;
+
  font-family: 'League Spartan';
  font-style: normal;
  font-weight: 300;
+ padding-bottom: 48.38px;
  font-size: 1.25rem;
  line-height: 130%;
  display: flex;
@@ -232,7 +220,7 @@ z-index: 1006;
     vertical-align: top; /* Alinear las imágenes en la parte superior */
   }
   .main-container {
-    height: 150vh ;
+    padding-bottom: 40px;
   }
   .saber-mas2 {
     font-size: 15px;
@@ -240,10 +228,9 @@ z-index: 1006;
   }
   .container-images {
     height: 100%;
-    margin-top: -10%; /* Ajusta según sea necesario */
+    margin: 0;
   }
   .tituloEstancias {
-    top: 5%;
     font-size: 2rem;
     line-height: 50px;
   }
@@ -252,7 +239,6 @@ z-index: 1006;
   }
   .subtituloEstancias{
     width: 100%;
-    top: 7.5% ;
     margin: 0;
     font-size: 1.25rem;
     line-height: 130%;
@@ -260,17 +246,16 @@ z-index: 1006;
   .textoImagenText {
     font-size: 1.25rem ;
     line-height: 1.1;
+    margin-top: 70%;
   }
   .dots-container {
     display: flex;
     justify-content: space-evenly;
     margin-top: 6vh;   
    }
-   .main-container .slider-container .container-images{
-    margin-top: 15%;
-   }
+
   .textos-card {
-    top:-90vh !important;
+    margin-top: -80vh;
   }
 }
 @media only screen and ( min-width: 361px)  and (max-width: 600px) {
@@ -288,7 +273,8 @@ z-index: 1006;
     vertical-align: top; /* Alinear las imágenes en la parte superior */
   }
   .main-container {
-    height: 145vh ;
+    height: auto;
+    padding-bottom: 48.38px;
   }
   .saber-mas2 {
     font-size: 15px;
@@ -296,10 +282,9 @@ z-index: 1006;
   }
   .container-images {
     height: 100%;
-    margin-top: -10%; /* Ajusta según sea necesario */
   }
   .tituloEstancias {
-    top: 5%;
+
     font-size: 2rem;
     line-height: 50px;
   }
@@ -308,7 +293,6 @@ z-index: 1006;
   }
   .subtituloEstancias{
     width: 100%;
-    top: 7.5% ;
     margin: 0;
     font-size: 1.25rem;
     line-height: 130%;
@@ -322,14 +306,11 @@ z-index: 1006;
     justify-content: space-evenly;
     margin-top: 6vh;   
    }
-   .main-container .slider-container .container-images{
-    margin-top: 15%;
-   }
   .textos-card {
-    top:-62% !important;
+    margin-top: -80vh;
   }
 }
-@media only screen and (min-width: 601px) and (max-width: 1023px) {
+@media only screen and (min-width: 601px) and (max-width: 1022px) {
     .main-container ul,
     li {
       list-style: none;
@@ -341,10 +322,6 @@ z-index: 1006;
       margin: auto;
       max-width: 100vw; /* Ancho máximo para evitar que las imágenes sean demasiado grandes */
       white-space: normal; /* Restablecer el espaciado entre líneas */
-      vertical-align: top; /* Alinear las imágenes en la parte superior */
-    }
-    .main-container {
-      height: 125vh;
     }
     .dots-container {
       width: 70vw; 
@@ -363,9 +340,7 @@ z-index: 1006;
     }
     .subtituloEstancias {
       width: 90%;
-      margin: 5%;
-      height: 7.5%;  
-      top: 5%;
+      margin: auto;
       font-size: 1.625rem;
       line-height: 130%;
     }
@@ -376,11 +351,9 @@ z-index: 1006;
     }
     .container-images {
       width: 80%; /* Ancho completo del contenedor */
-      margin-top: 10%; /* Ajusta según sea necesario */
     }   
     .main-container .textos-card{
       height: 80vh;
-      top:-89.4vh;
     }
     .container-images ul li img{
       margin-top: 0%;
@@ -401,6 +374,7 @@ z-index: 1006;
       margin: 0;
       height: 100%;
       left: 10%;
+      margin-top: -80.5vh;
     }
     .textoImagenText {
       width: 50vw;
@@ -409,7 +383,7 @@ z-index: 1006;
       line-height: 1.1;
     }
 }
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:1023px){
       .main-container{
         display: none;
       }  
