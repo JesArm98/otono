@@ -83,7 +83,7 @@ const CarruselActividades = () => {
             {data.map((item, index) => (
               <li
                 key={index}
-                className={applyAdditionalOpacity ? "opacidad-alternativa" : ""}
+                className={showMore ? "opacidad-alternativa" : ""}
               >
                 <img src={item.imgUrl} alt={item.imgUrl} />
               </li>
