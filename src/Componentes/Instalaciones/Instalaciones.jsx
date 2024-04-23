@@ -55,37 +55,31 @@ function Instalaciones() {
           interval={2400}
         >
           <div>
-            <img src=".././images/PNG Objetivo/alberca.webp" loading="lazy" />
+            <img src=".././images/PNG Objetivo/alberca.webp" alt="" />
             <p className="legend">Alberca</p>
           </div>
           <div>
-            <img
-              src=".././images/PNG Objetivo/biblioteca.webp"
-              loading="lazy"
-            />
+            <img src=".././images/PNG Objetivo/biblioteca.webp" alt="" />
             <p className="legend">Biblioteca</p>
           </div>
           <div>
-            <img src=".././images/PNG Objetivo/capilla.webp" loading="lazy" />
+            <img src=".././images/PNG Objetivo/capilla.webp" alt="" />
             <p className="legend">Capilla</p>
           </div>
           <div>
-            <img
-              src=".././images/PNG Objetivo/restaurante.webp"
-              loading="lazy"
-            />
+            <img src=".././images/PNG Objetivo/restaurante.webp" alt="" />
             <p className="legend">Restaurante</p>
           </div>
           <div>
-            <img src=".././images/PNG Objetivo/gimnasio.webp" loading="lazy" />
+            <img src=".././images/PNG Objetivo/gimnasio.webp" alt="" />
             <p className="legend">Gimnasio</p>
           </div>
           <div>
-            <img src=".././images/PNG Objetivo/jardin.webp" loading="lazy" />
+            <img src=".././images/PNG Objetivo/jardin.webp" alt="" />
             <p className="legend">Jardin</p>
           </div>
           <div>
-            <img src=".././images/PNG Objetivo/spa.webp" loading="lazy" />
+            <img src=".././images/PNG Objetivo/spa.webp" alt="" />
             <p className="legend">Spa</p>
           </div>
         </Carousel>

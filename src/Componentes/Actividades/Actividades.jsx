@@ -11,7 +11,7 @@ function Actividades() {
       </p>
       <div className="imagenesRow">
         <div className="imagenActividades" id="imagenActividades1">
-          <img src=".././images/terapia_fisica.webp" alt="Logo" />
+          <img src=".././images/terapia_fisica.webp" alt="" alt="Logo" />
           <div className="original-text">
             Terapias Fisicas (Individuales y grupales)
           </div>
@@ -22,7 +22,7 @@ function Actividades() {
           </div>
         </div>
         <div className="imagenActividades" id="imagenActividades2">
-          <img src=".././images/terapia_cognitiva.webp" alt="Logo" />
+          <img src=".././images/terapia_cognitiva.webp" alt="" alt="Logo" />
           <div className="original-text">
             Terapias Cognitivas (Personalizadas por residente)
           </div>
@@ -33,7 +33,7 @@ function Actividades() {
           </div>
         </div>
         <div className="imagenActividades" id="imagenActividades3">
-          <img src=".././images/buffet_familiar.webp" alt="Logo" />
+          <img src=".././images/buffet_familiar.webp" alt="" alt="Logo" />
           <div className="original-text">Sábado buffet desayuno familiar</div>
           <div className="hola123">
             Una actividad diseñada para que los familiares de nuestros
@@ -42,7 +42,7 @@ function Actividades() {
           </div>
         </div>
         <div className="imagenActividades" id="imagenActividades4">
-          <img src=".././images/eventos.webp" alt="Logo" />
+          <img src=".././images/eventos.webp" alt="" alt="Logo" />
           <div className="original-text">Eventos</div>
           <div className="hola123">
             Transformamos cada efeméride en un evento especial para nuestros
