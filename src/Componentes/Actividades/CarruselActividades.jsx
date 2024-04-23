@@ -7,7 +7,6 @@ const CarruselActividades = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTextos, setCurrentTextos] = useState({});
   const [showMore, setShowMore] = useState(false);
-  const [applyAdditionalOpacity, setApplyAdditionalOpacity] = useState(false);
   const [startTouch, setStartTouch] = useState({ x: null, y: null });
 
   useEffect(() => {
@@ -21,8 +20,6 @@ const CarruselActividades = () => {
     }
 
     setCurrentTextos(data[currentIndex].textos);
-
-    setApplyAdditionalOpacity(false);
   }, [currentIndex]);
 
   const handleButtonClick = (idx) => {
@@ -32,7 +29,12 @@ const CarruselActividades = () => {
 
   const handleShowMore = () => {
     setShowMore(!showMore);
-    setApplyAdditionalOpacity(!showMore); // Actualizar el estado de opacidad adicional
+    const textosCard = document.querySelector(".textos-card");
+    if (!showMore) {
+      textosCard.classList.add("opacidad-alternativa");
+    } else {
+      textosCard.classList.remove("opacidad-alternativa");
+    }
   };
 
   const handleTouchStart = (e) => {
@@ -81,10 +83,7 @@ const CarruselActividades = () => {
         <div className="container-images">
           <ul ref={listRef}>
             {data.map((item, index) => (
-              <li
-                key={index}
-                className={showMore ? "opacidad-alternativa" : ""}
-              >
+              <li key={index}>
                 <img src={item.imgUrl} alt={item.imgUrl} />
               </li>
             ))}
