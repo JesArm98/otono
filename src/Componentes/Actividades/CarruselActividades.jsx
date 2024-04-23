@@ -12,16 +12,14 @@ const CarruselActividades = () => {
 
   useEffect(() => {
     const listNode = listRef.current;
-    const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
+    const imgNodes = listNode.querySelectorAll("li > img");
+    const imagesWidth = imgNodes[0].clientWidth;
+    const scrollLeft = listNode.scrollLeft;
+    const index = Math.round(scrollLeft / imagesWidth);
 
-    if (imgNode) {
-      imgNode.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-
-    setCurrentTextos(data[currentIndex].textos);
-  }, [currentIndex]);
+    setCurrentIndex(index);
+    setCurrentTextos(data[index].textos);
+  }, [listRef.current]);
 
   const handleButtonClick = (idx) => {
     setActiveButton(idx);
@@ -54,17 +52,10 @@ const CarruselActividades = () => {
 
     const touch = e.touches[0];
     const deltaX = touch.clientX - startTouch.x;
-    const deltaY = touch.clientY - startTouch.y;
 
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      if (deltaX > 0 && currentIndex > 0) {
-        setCurrentIndex(currentIndex - 1);
-      } else if (deltaX < 0 && currentIndex < data.length - 1) {
-        setCurrentIndex(currentIndex + 1);
-      }
-    }
+    listRef.current.scrollLeft -= deltaX;
 
-    setStartTouch({ x: null, y: null });
+    setStartTouch({ x: touch.clientX, y: touch.clientY });
   };
 
   return (
@@ -81,8 +72,8 @@ const CarruselActividades = () => {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
       >
-        <div className="container-images">
-          <ul ref={listRef}>
+        <div className="container-images" ref={listRef}>
+          <ul>
             {data.map((item, index) => (
               <li key={index}>
                 <img src={item.imgUrl} alt={item.imgUrl} />
