@@ -1,4 +1,3 @@
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./Estancias.css";
 
 function Estancias() {
@@ -27,7 +26,7 @@ function Estancias() {
             onMouseLeave={handleHover}
             style={{ width: "calc(20%)" }}
           >
-            <LazyLoadImage src=".././images/estancia1 1.webp" alt="" />
+            <img src=".././images/estancia1 1.webp" alt="" />
             <div className="original-text">Temporal</div>
             <div className="hola123">
               Tu decides los dias de estancia, sin dejar de disfrutar los
@@ -57,7 +56,7 @@ function Estancias() {
             onMouseLeave={handleHover}
             style={{ width: "calc(20%)" }}
           >
-            <LazyLoadImage src=".././images/estancia2 1.webp" alt="" />
+            <img src=".././images/estancia2 1.webp" alt="" />
             <div className="original-text">Casa de Dia</div>
             <div className="hola123">
               Estancia de 4 a 12 horas con horario abierto de entrada y salida.
@@ -82,7 +81,7 @@ function Estancias() {
             onMouseLeave={handleHover}
             style={{ width: "calc(22.5%)" }}
           >
-            <LazyLoadImage src=".././images/estancia3 1.webp" alt="" />
+            <img src=".././images/estancia3 1.webp" alt="" />
             <div className="original-text">Permanente</div>
             <div className="hola123">
               Descubre la calidad de vida plena para adultos mayores con cuidado
