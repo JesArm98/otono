@@ -7,6 +7,7 @@ function CarruselEstancias() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTextos, setCurrentTextos] = useState({});
   const [touchStartX, setTouchStartX] = useState(0);
+  const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
     const imgNode = listRef.current.querySelectorAll("li > img")[currentIndex];
@@ -40,6 +41,10 @@ function CarruselEstancias() {
     }
   };
 
+  const handleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
   return (
     <div
       id="estancias2"
@@ -66,6 +71,9 @@ function CarruselEstancias() {
       <div className="textos-card2">
         <div className="original-text2">{currentTextos.originalText2}</div>
         <div className="hola1232">{currentTextos.hola1232Text}</div>
+        <button className="saber-mas2" onClick={handleShowMore}>
+          {showMore ? "Mostrar menos" : "Saber más"}
+        </button>
       </div>
       <div className="dots-container2">
         {data2.map((_, idx) => (
