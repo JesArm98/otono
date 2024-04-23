@@ -103,7 +103,7 @@ function Objetivo() {
       </Grid>
       <Grid item xs={12} md={5}>
         {" "}
-        <img src=".././images/fotoPelota.png" alt="" style={imageStyles} />
+        <img src=".././images/fotoPelota.webp" alt="" style={imageStyles} />
       </Grid>
     </Grid>
   );
