@@ -279,7 +279,9 @@ margin: 0;
   }
   .saber-mas2 {
     font-size: 15px;
-    margin-top: 50%;
+    margin-top: 175% !important;
+    color: #000000;
+    border-color: #000000;
   }
   .container-images {
     height: 100%;
