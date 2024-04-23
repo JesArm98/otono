@@ -28,7 +28,6 @@ const CarruselActividades = () => {
 
   const handleButtonClick = (idx) => {
     setActiveButton(idx);
-    setCurrentIndex(idx);
     setShowMore(false);
   };
 
@@ -102,7 +101,10 @@ const CarruselActividades = () => {
               </div>
             </div>
           )}
-          <button className="saber-mas2" onClick={handleShowMore}>
+          <button
+            className={`saber-mas2 ${showMore ? "saber-mas-activo" : ""}`}
+            onClick={handleShowMore}
+          >
             {showMore ? "Mostrar menos" : "Saber más"}
           </button>
         </div>

@@ -105,11 +105,12 @@ background-color: transparent;
 font-family: 'League Spartan';
 font-style: normal;
 font-size: 15px;
-margin-top: 7.5%;
+margin-top: 50%;
 color: white;
 border: 1px solid #fff; 
 border-radius: 10px;
 z-index: 1006;
+position: absolute;
 }
 .container-images {
  position: relative; /* Asegura que los elementos absolutamente posicionados sean relativos a este contenedor */
@@ -278,7 +279,7 @@ margin: 0;
   }
   .saber-mas2 {
     font-size: 15px;
-    margin-top: 10%;
+    margin-top: 50%;
   }
   .container-images {
     height: 100%;
