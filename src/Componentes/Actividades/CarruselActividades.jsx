@@ -6,8 +6,8 @@ const CarruselActividades = () => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTextos, setCurrentTextos] = useState({});
+  const [touchStartX, setTouchStartX] = useState(0);
   const [showMore, setShowMore] = useState(false);
-  const [startTouch, setStartTouch] = useState({ x: null, y: null });
 
   useEffect(() => {
     const imgNode = listRef.current.querySelectorAll("li > img")[currentIndex];
@@ -22,9 +22,26 @@ const CarruselActividades = () => {
     setCurrentTextos(data[currentIndex].textos);
   }, [currentIndex]);
 
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const diffX = touchStartX - touchEndX;
+    const threshold = 50;
+
+    if (diffX > threshold) {
+      const nextIndex = (currentIndex + 1) % data.length;
+      setCurrentIndex(nextIndex);
+    } else if (diffX < -threshold) {
+      const prevIndex = (currentIndex - 1 + data.length) % data.length;
+      setCurrentIndex(prevIndex);
+    }
+  };
+
   const handleButtonClick = (idx) => {
     setCurrentIndex(idx);
-    setShowMore(false);
   };
 
   const handleShowMore = () => {
@@ -37,40 +54,12 @@ const CarruselActividades = () => {
     }
   };
 
-  const handleTouchStart = (e) => {
-    const touch = e.touches[0];
-    setStartTouch({
-      x: touch.clientX,
-      y: touch.clientY,
-    });
-  };
-
-  const handleTouchMove = (e) => {
-    if (!startTouch.x || !startTouch.y) {
-      return;
-    }
-
-    const touch = e.touches[0];
-    const deltaX = touch.clientX - startTouch.x;
-    const deltaY = touch.clientY - startTouch.y;
-
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      if (deltaX > 0 && currentIndex > 0) {
-        setCurrentIndex(currentIndex - 1);
-      } else if (deltaX < 0 && currentIndex < data.length - 1) {
-        setCurrentIndex(currentIndex + 1);
-      }
-    }
-
-    setStartTouch({ x: null, y: null });
-  };
-
   return (
     <div
       id="actividades2"
       className="main-container"
       onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       <h1 className="tituloEstancias">Actividades</h1>
       <p className="subtituloEstancias">

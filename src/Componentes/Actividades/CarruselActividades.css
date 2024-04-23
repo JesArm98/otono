@@ -64,6 +64,7 @@
   margin-top: 41vh;
   font-family: 'League Spartan';
   font-style: normal;
+  padding-bottom: 20px;
   opacity: 1;
   position: relative; /* Ajusta la posición absoluta */
 }
@@ -105,7 +106,7 @@ background-color: transparent;
 font-family: 'League Spartan';
 font-style: normal;
 font-size: 15px;
-margin-top: 7.5% !important;
+margin-top: 7.5%;
 color: white;
 border: 1px solid #fff; 
 border-radius: 10px;
@@ -191,6 +192,7 @@ margin: 0;
 .textoImagenText {
  width: 80vw;
  margin-top:45%;
+ padding-bottom: 20px;
  display: flex;
  justify-content: center; /* Centra horizontalmente */
  align-items: center; /* Centra verticalmente */
