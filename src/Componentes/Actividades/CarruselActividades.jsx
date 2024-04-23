@@ -32,7 +32,9 @@ const CarruselActividades = () => {
 
   const handleShowMore = () => {
     setShowMore(!showMore);
-    setApplyAdditionalOpacity(!applyAdditionalOpacity);
+
+    // Aplicar la clase de opacidad alternativa solo cuando se muestra más texto
+    setApplyAdditionalOpacity(!showMore);
   };
 
   const handleTouchStart = (e) => {
