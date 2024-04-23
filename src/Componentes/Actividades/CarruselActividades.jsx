@@ -9,16 +9,15 @@ const CarruselActividades = () => {
   const [showMore, setShowMore] = useState(false);
   const [activeButton, setActiveButton] = useState(0);
   const [startTouch, setStartTouch] = useState({ x: null, y: null });
+  const [touchMoveDelta, setTouchMoveDelta] = useState(0);
 
   useEffect(() => {
     const listNode = listRef.current;
-    const imgNodes = listNode.querySelectorAll("li > img");
-    const imagesWidth = imgNodes[0].clientWidth;
-    const scrollLeft = listNode.scrollLeft;
-    const index = Math.round(scrollLeft / imagesWidth);
+    const imagesWidth = listNode.offsetWidth;
+    const newIndex = Math.round(listNode.scrollLeft / imagesWidth);
 
-    setCurrentIndex(index);
-    setCurrentTextos(data[index].textos);
+    setCurrentIndex(newIndex);
+    setCurrentTextos(data[newIndex].textos);
   }, [listRef.current]);
 
   const handleButtonClick = (idx) => {
@@ -43,6 +42,7 @@ const CarruselActividades = () => {
       x: touch.clientX,
       y: touch.clientY,
     });
+    setTouchMoveDelta(0);
   };
 
   const handleTouchMove = (e) => {
@@ -52,10 +52,22 @@ const CarruselActividades = () => {
 
     const touch = e.touches[0];
     const deltaX = touch.clientX - startTouch.x;
+    setTouchMoveDelta(deltaX);
+  };
 
-    listRef.current.scrollLeft -= deltaX;
+  const handleTouchEnd = () => {
+    if (touchMoveDelta === 0) return;
 
-    setStartTouch({ x: touch.clientX, y: touch.clientY });
+    const threshold = listRef.current.offsetWidth / 3;
+    if (Math.abs(touchMoveDelta) > threshold) {
+      const newIndex = currentIndex + (touchMoveDelta > 0 ? -1 : 1);
+      if (newIndex >= 0 && newIndex < data.length) {
+        setCurrentIndex(newIndex);
+        setActiveButton(newIndex);
+      }
+    }
+    setTouchMoveDelta(0);
+    setStartTouch({ x: null, y: null });
   };
 
   return (
@@ -71,8 +83,10 @@ const CarruselActividades = () => {
         className="slider-container"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        ref={listRef}
       >
-        <div className="container-images" ref={listRef}>
+        <div className="container-images">
           <ul>
             {data.map((item, index) => (
               <li key={index}>
