@@ -43,6 +43,12 @@ function CarruselEstancias() {
 
   const handleShowMore = () => {
     setShowMore(!showMore);
+    const textosCard = document.querySelector(".textos-card2");
+    if (!showMore) {
+      textosCard.classList.add("opacidad-alternativa");
+    } else {
+      textosCard.classList.remove("opacidad-alternativa");
+    }
   };
 
   return (
@@ -69,8 +75,25 @@ function CarruselEstancias() {
         </ul>
       </div>
       <div className="textos-card2">
-        <div className="original-text2">{currentTextos.originalText2}</div>
-        <div className="hola1232">{currentTextos.hola1232Text}</div>
+        {!showMore && (
+          <div>
+            <div className="original-text2">{currentTextos.originalText2}</div>
+            <div className="hola1232">{currentTextos.hola1232Text}</div>
+          </div>
+        )}
+        {showMore && (
+          <div className="nuevo-texto2">
+            <div className={`textoImagenText2 ${showMore ? "" : "hidden"}`}>
+              <ul>
+                <div id="h123">Servicios que incluye:</div>
+                {currentTextos.textoImagenText2 &&
+                  currentTextos.textoImagenText2
+                    .split("\n")
+                    .map((servicio, index) => <li key={index}>{servicio}</li>)}
+              </ul>
+            </div>
+          </div>
+        )}
         <button className="saber-mas2" onClick={handleShowMore}>
           {showMore ? "Mostrar menos" : "Saber más"}
         </button>
