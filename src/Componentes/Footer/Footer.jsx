@@ -1,3 +1,4 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./Footer.css";
 
 function Footer() {
@@ -27,9 +28,9 @@ function Footer() {
   return (
     <div className="footer-container" id="footer">
       <a href="#" style={{ textDecoration: "none" }}>
-        <img
+        <LazyLoadImage
           src=".././images/logotipo_casaotono.svg"
-          alt="Logo"
+          alt=""
           className="footerLogo"
         />
       </a>
@@ -99,9 +100,9 @@ function Footer() {
             target="_blank"
             style={{ textDecoration: "none" }}
           >
-            <img
+            <LazyLoadImage
               src=".././images/facebook_icon.svg"
-              alt="Logo"
+              alt=""
               className="facebook"
             />
           </a>
@@ -110,17 +111,17 @@ function Footer() {
             target="_blank"
             style={{ textDecoration: "none" }}
           >
-            <img
+            <LazyLoadImage
               src=".././images/googlemaps_icon.svg"
-              alt="Logo"
+              alt=""
               className="maps"
             />
           </a>
           <a href="" target="_blank" style={{ textDecoration: "none" }}>
-            <img
+            <LazyLoadImage
               onClick={openWhatsApp}
               src=".././images/whats_icon.svg"
-              alt="Logo"
+              alt=""
               className="whatsapp"
             />
           </a>

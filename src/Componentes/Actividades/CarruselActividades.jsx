@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { data } from "../../assets/data";
 import "./CarruselActividades.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const CarruselActividades = () => {
   const listRef = useRef();
@@ -73,7 +74,7 @@ const CarruselActividades = () => {
           <ul ref={listRef}>
             {data.map((item, index) => (
               <li key={index}>
-                <img src={item.imgUrl} alt={item.imgUrl} />
+                <LazyLoadImage src={item.imgUrl} alt={item.imgUrl} />
               </li>
             ))}
           </ul>

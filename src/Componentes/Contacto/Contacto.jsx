@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import "./Contacto.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Contacto() {
   const [isSending, setIsSending] = useState(false);
@@ -146,7 +147,7 @@ function Contacto() {
                     marginBottom: "34px",
                   }}
                 >
-                  <img
+                  <LazyLoadImage
                     className="iconoCon"
                     src=".././images/Contacto/Mail.svg"
                     alt=""
@@ -167,7 +168,7 @@ function Contacto() {
                     gap: "2.92%",
                   }}
                 >
-                  <img
+                  <LazyLoadImage
                     id="telefonos"
                     className="iconoCon"
                     style={{ marginTop: "4px" }}
@@ -189,7 +190,7 @@ function Contacto() {
                     marginBottom: "34px",
                   }}
                 >
-                  <img
+                  <LazyLoadImage
                     id="whatsapp"
                     className="iconoCon"
                     src=".././images/whatapp.svg"
@@ -213,7 +214,7 @@ function Contacto() {
                     marginLeft: "80px",
                   }}
                 >
-                  <img
+                  <LazyLoadImage
                     id="ubicacion"
                     style={{ marginTop: "8px" }}
                     className="iconoCon"
@@ -250,7 +251,10 @@ function Contacto() {
                       }}
                       className="formuButton"
                     >
-                      <img src=".././images/Contacto/Ubicacion 2.svg" alt="" />
+                      <LazyLoadImage
+                        src=".././images/Contacto/Ubicacion 2.svg"
+                        alt=""
+                      />
                       <div
                         className="textoCont"
                         id="btn_enviar"

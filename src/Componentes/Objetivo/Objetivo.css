@@ -230,9 +230,9 @@ padding: 48.38px 0;
 
 @media (min-width:1281px){
     .descObjetivo {
-        padding-left: 0px;
+        padding-left: 80px;
         width: 80%;
-        margin: auto;
+        margin: 0;
         font-style: normal;
         font-weight: 300;
         font-size: 1.625rem;

@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-image: url('.././images/HeaderIMG/IMAGEN DE PORTADA.webp');
     background-size: cover;

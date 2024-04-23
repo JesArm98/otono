@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import "./Objetivo.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Objetivo() {
   const imageStyles = {
@@ -29,7 +30,7 @@ function Objetivo() {
         <ul className="lista">
           <li>
             {" "}
-            <img
+            <LazyLoadImage
               style={descStyles}
               src=".././images/svgObjetivo/Group 1.svg"
               alt=""
@@ -38,7 +39,7 @@ function Objetivo() {
           </li>
           <li>
             {" "}
-            <img
+            <LazyLoadImage
               style={descStyles}
               src=".././images/svgObjetivo/Capa_1 (3).svg"
               alt=""
@@ -47,7 +48,7 @@ function Objetivo() {
           </li>
           <li>
             {" "}
-            <img
+            <LazyLoadImage
               style={descStyles}
               src=".././images/svgObjetivo/Capa_1 (6).svg"
               alt=""
@@ -56,7 +57,7 @@ function Objetivo() {
           </li>
           <li>
             {" "}
-            <img
+            <LazyLoadImage
               style={descStyles}
               src=".././images/svgObjetivo/Capa_1.svg"
               alt=""
@@ -65,7 +66,7 @@ function Objetivo() {
           </li>
           <li>
             {" "}
-            <img
+            <LazyLoadImage
               style={descStyles}
               src=".././images/svgObjetivo/Capa_1 (2).svg"
               alt=""
@@ -74,7 +75,7 @@ function Objetivo() {
           </li>
           <li>
             {" "}
-            <img
+            <LazyLoadImage
               style={descStyles}
               src=".././images/svgObjetivo/Capa_1 (5).svg"
               alt=""
@@ -83,7 +84,7 @@ function Objetivo() {
           </li>
           <li>
             {" "}
-            <img
+            <LazyLoadImage
               style={descStyles}
               src=".././images/svgObjetivo/Capa_1 (1).svg"
               alt=""
@@ -92,7 +93,7 @@ function Objetivo() {
           </li>
           <li className="customLi">
             {" "}
-            <img
+            <LazyLoadImage
               style={descStyles}
               src=".././images/svgObjetivo/Capa_1 (4).svg"
               alt=""
@@ -103,7 +104,11 @@ function Objetivo() {
       </Grid>
       <Grid item xs={12} md={5}>
         {" "}
-        <img src=".././images/fotoPelota.webp" alt="" style={imageStyles} />
+        <LazyLoadImage
+          src=".././images/fotoPelota.webp"
+          alt=""
+          style={imageStyles}
+        />
       </Grid>
     </Grid>
   );

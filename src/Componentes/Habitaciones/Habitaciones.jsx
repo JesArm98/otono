@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Habitaciones.css";
 import { Box, Container, Typography, Grid } from "@mui/material";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Habitaciones() {
   const [imagenes, setImagenes] = useState({
@@ -153,7 +154,7 @@ function Habitaciones() {
           <Grid container spacing={2} className="ImagenContainer">
             {/* Imagen principal grande a la izquierda */}
             <Grid item xs={12} lg={6} xl={6.15}>
-              <img
+              <LazyLoadImage
                 className="ImagenHabitacion"
                 id="principal"
                 style={{
@@ -169,7 +170,7 @@ function Habitaciones() {
             <Grid item xs={12} lg={5} xl={3}>
               <Grid container spacing={2}>
                 <Grid item xs={6} lg={7} xl={12}>
-                  <img
+                  <LazyLoadImage
                     className="ImagenHabitacion"
                     id="secundaria1"
                     style={{
@@ -188,7 +189,7 @@ function Habitaciones() {
                   />
                 </Grid>
                 <Grid item xs={6} lg={7} xl={12}>
-                  <img
+                  <LazyLoadImage
                     className="ImagenHabitacion"
                     id="secundaria2"
                     style={{
