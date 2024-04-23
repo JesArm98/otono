@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { data } from "../../assets/data";
 import "./CarruselActividades.css";
 
@@ -6,32 +6,38 @@ const CarruselActividades = () => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTextos, setCurrentTextos] = useState({});
-  const [showMore, setShowMore] = useState(false);
-  const [activeButton, setActiveButton] = useState(0);
-  const [startTouch, setStartTouch] = useState({ x: null, y: null });
-  const [touchMoveDelta, setTouchMoveDelta] = useState(0);
+  const [showMore, setShowMore] = useState(false); // Estado para mostrar el texto adicional
+  const [activeButton, setActiveButton] = useState(0); // Estado para mantener el botón activo
+  const [startTouch, setStartTouch] = useState({ x: null, y: null }); // Estado para el inicio del toque
 
   useEffect(() => {
     const listNode = listRef.current;
-    const imagesWidth = listNode.offsetWidth;
-    const newIndex = Math.round(listNode.scrollLeft / imagesWidth);
+    const imgNode = listNode.querySelectorAll("li > img")[currentIndex];
 
-    setCurrentIndex(newIndex);
-    setCurrentTextos(data[newIndex].textos);
-  }, [listRef.current]);
+    if (imgNode) {
+      imgNode.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+
+    // Actualizar los textos correspondientes a la imagen actual
+    setCurrentTextos(data[currentIndex].textos);
+  }, [currentIndex]);
 
   const handleButtonClick = (idx) => {
-    setActiveButton(idx);
-    setCurrentIndex(idx);
-    setShowMore(false);
+    setActiveButton(idx); // Establecer el botón activo
+    setCurrentIndex(idx); // Ir al slide correspondiente al botón
+    setShowMore(false); // Reiniciar el estado para ocultar el texto adicional
   };
 
   const handleShowMore = () => {
-    setShowMore(!showMore);
+    setShowMore(!showMore); // Alternar el estado para mostrar u ocultar el texto adicional
     const textosCard = document.querySelector(".textos-card");
     if (!showMore) {
+      // Si se muestra más, agrega la clase de opacidad alterna
       textosCard.classList.add("opacidad-alternativa");
     } else {
+      // Si se muestra menos, quita la clase de opacidad alterna
       textosCard.classList.remove("opacidad-alternativa");
     }
   };
@@ -42,7 +48,6 @@ const CarruselActividades = () => {
       x: touch.clientX,
       y: touch.clientY,
     });
-    setTouchMoveDelta(0);
   };
 
   const handleTouchMove = (e) => {
@@ -52,21 +57,24 @@ const CarruselActividades = () => {
 
     const touch = e.touches[0];
     const deltaX = touch.clientX - startTouch.x;
-    setTouchMoveDelta(deltaX);
-  };
+    const deltaY = touch.clientY - startTouch.y;
 
-  const handleTouchEnd = () => {
-    if (touchMoveDelta === 0) return;
-
-    const threshold = listRef.current.offsetWidth / 3;
-    if (Math.abs(touchMoveDelta) > threshold) {
-      const newIndex = currentIndex + (touchMoveDelta > 0 ? -1 : 1);
-      if (newIndex >= 0 && newIndex < data.length) {
-        setCurrentIndex(newIndex);
-        setActiveButton(newIndex);
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      // movimiento horizontal
+      if (deltaX > 0) {
+        // Swipe hacia la derecha
+        if (currentIndex > 0) {
+          setCurrentIndex(currentIndex - 1);
+        }
+      } else {
+        // Swipe hacia la izquierda
+        if (currentIndex < data.length - 1) {
+          setCurrentIndex(currentIndex + 1);
+        }
       }
     }
-    setTouchMoveDelta(0);
+
+    // Resetear después del movimiento para prepararse para el siguiente swipe
     setStartTouch({ x: null, y: null });
   };
 
@@ -83,11 +91,9 @@ const CarruselActividades = () => {
         className="slider-container"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        ref={listRef}
       >
         <div className="container-images">
-          <ul>
+          <ul ref={listRef}>
             {data.map((item, index) => (
               <li key={index}>
                 <img src={item.imgUrl} alt={item.imgUrl} />
@@ -96,13 +102,16 @@ const CarruselActividades = () => {
           </ul>
         </div>
         <div className="textos-card">
+          {/* Renderiza original-text y hola123 cuando showMore es false */}
           {!showMore && (
             <div>
               <div className="original-text">{currentTextos.originalText}</div>
             </div>
           )}
+          {/* Mostrar el nuevo texto solo cuando se presione el botón */}
           {showMore && (
             <div className="nuevo-texto">
+              {/* Renderizar la lista de servicios */}
               <div className={`textoImagenText${showMore ? "" : "hidden"}`}>
                 {currentTextos.textoImagenText}
               </div>
