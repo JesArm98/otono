@@ -41,6 +41,10 @@ function CarruselEstancias() {
     }
   };
 
+  const handleButtonClick = (idx) => {
+    setCurrentIndex(idx);
+  };
+
   const handleShowMore = () => {
     setShowMore(!showMore);
     const textosCard = document.querySelector(".textos-card2");
@@ -105,6 +109,7 @@ function CarruselEstancias() {
             className={`dot-container-item2 ${
               idx === currentIndex ? "active" : ""
             }`}
+            onClick={() => handleButtonClick(idx)}
           >
             <button className="boton2"></button>
           </div>

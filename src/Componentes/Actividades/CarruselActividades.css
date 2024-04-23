@@ -105,12 +105,11 @@ background-color: transparent;
 font-family: 'League Spartan';
 font-style: normal;
 font-size: 15px;
-margin-top: 50%;
+margin-top: 7.5%;
 color: white;
 border: 1px solid #fff; 
 border-radius: 10px;
 z-index: 1006;
-position: absolute;
 }
 .container-images {
  position: relative; /* Asegura que los elementos absolutamente posicionados sean relativos a este contenedor */
@@ -225,9 +224,7 @@ margin: 0;
   }
   .saber-mas2 {
     font-size: 15px;
-    margin-top: 175% !important;
-    color: #000000;
-    border-color: #000000;
+    margin-top: 10%;
   }
   .container-images {
     height: 100%;
@@ -281,9 +278,7 @@ margin: 0;
   }
   .saber-mas2 {
     font-size: 15px;
-    margin-top: 175% !important;
-    color: #000000;
-    border-color: #000000;
+    margin-top: 10%;
   }
   .container-images {
     height: 100%;
@@ -353,7 +348,6 @@ margin: 0;
       width: 150px;
       height: 40px;
       font-size: 18px;
-      margin-top: 50% !important;
     }
     .container-images {
       width: 80%; /* Ancho completo del contenedor */
