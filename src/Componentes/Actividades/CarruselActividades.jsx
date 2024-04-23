@@ -31,7 +31,8 @@ const CarruselActividades = () => {
     setShowMore(false);
   };
 
-  const handleShowMore = () => {
+  const handleShowMore = (e) => {
+    e.preventDefault(); // Evitar la acción predeterminada del botón
     setShowMore(!showMore);
     const textosCard = document.querySelector(".textos-card");
     if (!showMore) {

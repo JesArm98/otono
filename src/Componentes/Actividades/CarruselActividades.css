@@ -349,6 +349,7 @@ margin: 0;
       width: 150px;
       height: 40px;
       font-size: 18px;
+      margin-top: 50% !important;
     }
     .container-images {
       width: 80%; /* Ancho completo del contenedor */
