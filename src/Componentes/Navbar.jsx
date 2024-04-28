@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 import MobileMenu from "./MobileMenu";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Navbar() {
   const [background, setBackground] = useState("transparent");
@@ -152,7 +153,7 @@ function Navbar() {
             onClick={handleNavLinkClick}
             style={{ color: "inherit", textDecoration: "none" }}
           >
-            <img
+            <LazyLoadImage
               src="./images/logotipo_casaotono.svg"
               alt="Logo"
               className="navbarLogo"
@@ -201,7 +202,7 @@ function Navbar() {
         >
           <a href="#Header">
             {" "}
-            <img
+            <LazyLoadImage
               className="logoCell"
               src="./images/PNG Objetivo/LogoCell.svg"
               alt=""

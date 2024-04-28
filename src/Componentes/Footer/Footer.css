@@ -1,22 +1,41 @@
 @media only screen and (min-width: 1024px) {
 
 }
+.dialogPrivacidad p{
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    color: #D45F35;
+}
+.dialogPrivacidad br{
+    text-align: justify;
+}
+#avisoPrivacidad{
+    color:#582114;
+}
 .hola {
     position: absolute;
     width: 80%;
     left: 50%; /* Centra horizontalmente */
     top:90%; /* Centra verticalmente */
     transform: translate(-50%, -50%); /* Centra completamente */
-    font-family: 'League Spartan';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.1;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #6E5356;
     border-top: 1px solid #D45F35;
+}
+.hola button {
+    border: none;
+    font-size: 20px;
+    font-family: 'League Spartan';
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.1;
+    background-color: #FCF9F5;
+    color: #6E5356;
+    margin: 10px;
+    cursor: pointer;
 }
 .footerbotones{
     width: 12vw;
@@ -51,7 +70,7 @@
 }
 .footerList1 {
         display: flex;
-        padding-bottom: 48.38px;
+        padding-bottom: 20px;
         justify-content: space-around;
         flex-direction: column;
         text-align: center;
@@ -71,7 +90,7 @@
         padding-inline-start: 0px;
 
         margin: 5% !important;
-                padding-bottom: 48.38px;
+                padding-bottom: 20px;
 }
 .footerList1 li {
         font-family: 'League Spartan';
@@ -126,10 +145,17 @@
 }
 
 @media only screen and (min-width:321px) and (max-width: 360px){
+    .dialogPrivacidad{
+        padding: 20px;
+    }
     .hola {
         width: 90vw;
         top: 93%; /* Centra verticalmente */
         font-size: 18px;
+    }
+    .hola button {
+        font-size: 16px;
+        margin: 10px 0 0 0;
     }
     .footerLogo {
         width: 50%;
@@ -213,6 +239,9 @@
 }
 
 @media only screen and (min-width: 361px) and (max-width:599px) {
+    .dialogPrivacidad{
+        padding: 20px !important;
+    }
     .hola {
         width: 90vw;
         top: 93%; /* Centra verticalmente */
@@ -303,7 +332,9 @@
 }
  
 @media only screen and (min-width: 600px) and (max-width: 1023px) {
-
+.hola{
+    top:85%
+}
     .footerbotones{
         width: 100px;
         font-size: 1rem !important;
@@ -361,6 +392,11 @@ padding-bottom: 20px;
         top: 97%; /* Centra verticalmente */
         font-size: 15px;
         line-height: 1.1;
+}
+.hola button {
+    font-size: 16px;
+    margin: 10px 0 0 0;
+    padding:0
 }
 .footerLogo {
         width: 50%;

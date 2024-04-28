@@ -1,1107 +1,190 @@
-/* Media queries */
-@media only screen and (min-width: 1025px) and (max-width: 1104px) {
-  .imagen-estancia {
-    position: relative;
-   
-  }
-
-  #imagen-estancia1 .original-text{
-    margin-left: 30%;
-  }
-  #imagen-estancia1 .hola123{
-    margin-left: 7.5%;
-  }
-  #imagen-estancia2 .original-text{
-    margin-left: 25%;
-  }
-  #imagen-estancia2 .hola123{
-    margin-left: 7.5%;
-  }
-  #imagen-estancia3 .original-text{
-    margin-left: 15%;
-  } 
-  #imagen-estancia3 .hola123{
-    margin-left: 0%;
-  }
-  /* Ocultar texto por defecto al hacer hover */
-.imagen-estancia:hover .original-text,
-.imagen-estancia:hover .hola123 {
-  opacity: 0; /* Oculta el texto por defecto al hacer hover */
-}
- 
-/* Mostrar texto nuevo al hacer hover */
-.imagen-estancia:hover .texto-imagen-contenedor {
-  opacity: 1;
-  z-index: 1001; /* Muestra el nuevo texto al hacer hover */
-}
- 
-.hover-text-visible .texto-imagen-contenedor {
-  opacity: 1; /* Mostrar por defecto */
-}
- 
-/* Aumentar la opacidad del filtro al hacer hover */
-.imagen-estancia:hover::before {
-  opacity: 0.96; /* Opacidad del color de fondo al hacer hover */
-}
-  /* Filtro de color con opacidad */
-.imagen-estancia::before {
-  content: ""; /* Agrega un pseudo-elemento */
-  position: absolute; /* Posiciona el pseudo-elemento */
-  top: 0; /* Coloca el pseudo-elemento en la parte superior */
-  left: 0; /* Coloca el pseudo-elemento en la parte izquierda */
-  width: 270px;
-
-  height: 450px; /* Altura completa del contenedor */
-  background-color: rgba(88, 33, 20); /* Color de fondo con transparencia */
-  z-index: 99; /* Mueve el pseudo-elemento detrás de las imágenes */
-  transition: opacity 0.3s ease; /* Agrega una transición suave para el cambio de opacidad */
-  opacity: 0.6; /* Opacidad por defecto */
-}
-  /* Estilos para los textos por defecto */
-.imagen-estancia .original-text,
-.imagen-estancia .hola123 {
-  position: absolute;
-  top: 40%; /* Ajusta la posición vertical según tus necesidades */
-  left: 55%;
-  transform: translate(-50%, -50%);
-  color: white;
-  z-index: 999;
-  text-align: center;
-  width: 240px; /* Ancho del texto */
-  transition: opacity 0.3s ease; /* Transición suave de opacidad */
-  opacity: 1; /* Opacidad por defecto */
-}
-  /* Estilos para los textos adicionales (texto-imagen-contenedor) */
-.texto-imagen-contenedor {
-  position: absolute;
-  min-width: 100px;
-  width: 100%;
-  height: auto;
-  font-family: 'League Spartan';
-  font-style: 1.625rem;
+.Estancias {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
-  top:0%;
-  color: #FFFFFF;
-  opacity: 0; /* Por defecto oculto */
-  transition: opacity 0.3s ease; /* Transición suave de opacidad */
+  font-family: 'League Spartan';
+  font-style: normal;
 }
-.estanciasFotos {
-  background-color: #FCF9F5;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /* Estilos generales */
- .Estancias {
-  background-color: #FCF9F5;
+.tituloEstanciass{
+  justify-content: center;
+  color: #582114;
+  font-weight: 500;
   width: 100%;
-  padding-bottom: 50px;
-  position: relative;
-  display: flex; /* Convertido en un contenedor flex */
-  flex-direction: column; /* Alinear los elementos verticalmente */
-  justify-content: center; /* Centrar verticalmente los elementos */
-  align-items: center; /* Centrar horizontalmente los elementos */
+  display: flex;
+  padding: 48.38px 0 0 0;
+  font-size: 2.5rem;
+  margin: 0;
 }
-  .imagen-estancia img {
-    width: 270px;
-    height: 450px;
-    object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
-  }
-  .tituloEstancias {
-    position: absolute;
-    font-family: 'League Spartan';
-    margin: 0 !important;
-    position: initial !important;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2.5rem !important;
-    margin-top: 48.3438px;
-    margin-bottom: 48.3438px ;
-    color: #582114;
-}
-  .subtituloEstancias {
-    width: 60% !important;
-    font-family: 'League Spartan';
-    margin: 0 !important;
-    position: initial;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 1.625rem !important;
-    line-height: 130% !important;
-    display: flex;
-    flex-direction: column; /* Alinear los elementos verticalmente */
-    align-items: center; /* Centrar horizontalmente los elementos */
-    text-align: center;
-    color: #000000;
-}
-.imagenes-row {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
-.original-text{
-  font-size: 2rem !important;
-  text-align: center;
-  margin-top: 0% !important;
-  font-weight: 500;
-  font-family: 'League Spartan';
-  font-style: normal;
-}
-.hola123{
-  font-size: 1.625rem;
-  margin-top: 40.5%;
-  width: 90%;
+.subtituloEstanciass{
+  justify-content: center;
   font-weight: 300;
-  font-family: 'League Spartan';
-  font-style: normal;
-}
-
-#imagen-estancia1 .texto-imagen-contenedor{
-  margin-top: 20%;
-  margin-left: 10%;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-#imagen-estancia2 .texto-imagen-contenedor{
-  margin-top: 45%;
-  margin-left:10%;
-  font-size: 1.625rem;
-  font-weight: 500;
-}
-#imagen-estancia3 .texto-imagen-contenedor{
-  margin-top: 15%;
-  margin-left: 5%;
-  font-size: 1.625rem;
-  font-weight: 500;
-}
-.texto-imagen-contenedor ul li {
+  width: 70%;
   display: flex;
   text-align: center;
-  align-items: center;
-  font-size: 1.1rem;
-  width: 100%;
-  line-height: 130%;
   margin: auto;
-  font-weight: 300;
+  padding: 48.38px 0;
+  font-size: 1.625rem;
 }
-  .texto-imagen-contenedor li {
-    width: 25%;
-    margin: auto;
-    display: flex;
-    font-weight: 300;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
- 
-  }
- 
- 
-.custom-shape-divider-bottom-1710877318 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.estanciasFotos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
   width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
 }
-.custom-shape-divider-bottom-1710877318 svg {
+.imagenes-row {
+  padding-bottom: 48.38px;
+  width: 100%;
+  display: flex;
   position: relative;
-  display: block;
-  width: calc(147% + 1.3px);
-  height: 20%;
+  justify-content: center;
 }
-.custom-shape-divider-bottom-1710877318 .shape-fill {
-  fill: #FFFFFF;
+.imagenesEstancia {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  position: relative;
 }
+.imagen-estancia {
+  width: 340px;
+  position: relative;
+}
+/*ESTILOS DE LOS TEXTOS DE LAS CARDS*/
+.cardText {
+  position: absolute; /* Establece la posición absoluta para que el texto se superponga a la imagen */
+  top:0;
+  bottom: 0; /* Alinea el texto en la parte inferior de la imagen */
+  left: 0; /* Alinea el texto a la izquierda de la imagen */
+  width: 100%; /* Hace que el texto ocupe todo el ancho de la imagen */
+  height: 100%;
+  background-color: rgba(88,33, 20, 0.6); /* Agrega un fondo oscuro transparente al texto */
+  color: white; /* Cambia el color del texto a blanco */
+  padding: 10px; /* Agrega un relleno alrededor del texto */
+  box-sizing: border-box; /* Incluye el relleno en el ancho y alto del elemento */
+  text-align: center;
+  visibility: visible; /* Hace que el texto sea visible por defecto */
+}
+.cardTitle{
+  font-weight: 500;
+  font-size: 2rem;
+  margin-top:70%
+}
+.cardDesc{
+  font-size: 1.625rem;
+  font-weight: 300;
+  margin-top: 15%;
+}
+.cardText:hover{
+  background-color: rgba(88, 33, 20, 0.96); /* Agrega un fondo oscuro transparente al texto */
+}
+.texto-imagen-contenedor {
+  position: absolute; /* Establece la posición absoluta */
+  top: 0; /* Alinea el texto en la parte superior */
+  left: 0; /* Alinea el texto a la izquierda */
+  width: 100%; /* Hace que el texto ocupe todo el ancho */
+  height: 100%; /* Hace que el texto ocupe todo el alto */
+  background-color: rgba(88, 33, 20, 0.96); /* Agrega un fondo oscuro transparente */
+  color: white; /* Cambia el color del texto a blanco */
+  padding: 10px; /* Agrega un relleno alrededor del texto */
+  box-sizing: border-box; /* Incluye el relleno en el ancho y alto del elemento */
+  text-align: center; /* Centra el texto horizontalmente */
+  display: flex; /* Utiliza flexbox para el diseño */
+  flex-direction: column; /* Organiza los elementos en columna */
+  justify-content: center; /* Centra verticalmente el contenido */
+  align-items: center; /* Centra horizontalmente el contenido */
+  font-size: 1.5rem;
+}
+.texto-imagen-contenedor ul li{
+  font-size: 1.2rem;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  line-height: 1.3;
+}
+.texto-imagen-contenedor h3{
+  margin: 0;
+}
+#estancia1 h3{
+  margin-top: 10%;
+}
+#estancia3 h3{
+  margin-top: 10%;
+}
+.imagen-estancia img {
+  justify-content: center;
+  width: 340px;
+}
+.imagen-estancia:hover .cardTitle,
+.imagen-estancia:hover .cardDesc {
+  visibility: hidden;
+}
+.texto-imagen-contenedor {
+  visibility: hidden; /* Hace que el texto de texto-imagen-contenedor no sea visible por defecto */
+}
+.imagen-estancia:hover .texto-imagen-contenedor {
+  visibility: visible; /* Hace visible el texto de texto-imagen-contenedor cuando se hace hover */
+}
+.imagenHover{
+  width: 340px;
+}
+/*MEDIA QUERY DONDE NO SE MIRAN*/
+@media screen and (max-width:1023px) {
+  .Estancias{
+    display: none;
   }
-  @media only screen and (min-width: 1105px) and (max-width: 1194px) {
-    .imagen-estancia {
-      position: relative;
-     
-    }
-  
-    #imagen-estancia1 .original-text{
-      margin-left: 25%;
-    }
-    #imagen-estancia1 .hola123{
-      margin-left: 0%;
-    }
-    #imagen-estancia2 .original-text{
-      margin-left: 20%;
-    }
-    #imagen-estancia2 .hola123{
-      margin-left: 0%;
-    }
-    #imagen-estancia3 .original-text{
-      margin-left: 10%;
-    } 
-    #imagen-estancia3 .hola123{
-      margin-left: -5%;
-    }
-    /* Ocultar texto por defecto al hacer hover */
-  .imagen-estancia:hover .original-text,
-  .imagen-estancia:hover .hola123 {
-    opacity: 0; /* Oculta el texto por defecto al hacer hover */
+}
+/*MEDIAS PARA TABLET VOLTEADA O LAPTOP*/
+@media screen and (min-width:1024px) and (max-width:1105px) {
+  .imagen-estancia{
+    width: 250px;
   }
-   
-  /* Mostrar texto nuevo al hacer hover */
-  .imagen-estancia:hover .texto-imagen-contenedor {
-    opacity: 1;
-    z-index: 1001; /* Muestra el nuevo texto al hacer hover */
+  .imagen-estancia img{
+    width: 250px;
   }
-   
-  .hover-text-visible .texto-imagen-contenedor {
-    opacity: 1; /* Mostrar por defecto */
-  }
-   
-  /* Aumentar la opacidad del filtro al hacer hover */
-  .imagen-estancia:hover::before {
-    opacity: 0.96; /* Opacidad del color de fondo al hacer hover */
-  }
-    /* Filtro de color con opacidad */
-  .imagen-estancia::before {
-    content: ""; /* Agrega un pseudo-elemento */
-    position: absolute; /* Posiciona el pseudo-elemento */
-    top: 0; /* Coloca el pseudo-elemento en la parte superior */
-    left: 0; /* Coloca el pseudo-elemento en la parte izquierda */
-    width: 270px;
-  
-    height: 450px; /* Altura completa del contenedor */
-    background-color: rgba(88, 33, 20); /* Color de fondo con transparencia */
-    z-index: 99; /* Mueve el pseudo-elemento detrás de las imágenes */
-    transition: opacity 0.3s ease; /* Agrega una transición suave para el cambio de opacidad */
-    opacity: 0.6; /* Opacidad por defecto */
-  }
-    /* Estilos para los textos por defecto */
-  .imagen-estancia .original-text,
-  .imagen-estancia .hola123 {
-    position: absolute;
-    top: 40%; /* Ajusta la posición vertical según tus necesidades */
-    left: 55%;
-    transform: translate(-50%, -50%);
-    color: white;
-    z-index: 999;
-    text-align: center;
-    width: 240px; /* Ancho del texto */
-    transition: opacity 0.3s ease; /* Transición suave de opacidad */
-    opacity: 1; /* Opacidad por defecto */
-  }
-    /* Estilos para los textos adicionales (texto-imagen-contenedor) */
-  .texto-imagen-contenedor {
-    position: absolute;
-    min-width: 100px;
+  .imagenesEstancia{
     width: 100%;
-    height: auto;
-    font-family: 'League Spartan';
-    font-style: 1.625rem;
-    align-items: center;
-    text-align: center;
-    top:0%;
-    color: #FFFFFF;
-    opacity: 0; /* Por defecto oculto */
-    transition: opacity 0.3s ease; /* Transición suave de opacidad */
   }
-  .estanciasFotos {
-    background-color: #FCF9F5;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    /* Estilos generales */
-   .Estancias {
-    background-color: #FCF9F5;
-    width: 100%;
-    padding-bottom: 50px;
-    position: relative;
-    display: flex; /* Convertido en un contenedor flex */
-    flex-direction: column; /* Alinear los elementos verticalmente */
-    justify-content: center; /* Centrar verticalmente los elementos */
-    align-items: center; /* Centrar horizontalmente los elementos */
+  .imagenHover{
+    width: 250px;
   }
-    .imagen-estancia img {
-      width: 270px;
-      height: 450px;
-      object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
-    }
-    .tituloEstancias {
-      position: absolute;
-      font-family: 'League Spartan';
-      margin: 0 !important;
-      position: initial !important;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 2.5rem !important;
-      margin-top: 48.3438px;
-      margin-bottom: 48.3438px ;
-      color: #582114;
+  .texto-imagen-contenedor h3{
+    font-size: 1rem;
   }
-    .subtituloEstancias {
-      width: 60% !important;
-      font-family: 'League Spartan';
-      margin: 0 !important;
-      position: initial;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 1.625rem !important;
-      line-height: 130% !important;
-      display: flex;
-      flex-direction: column; /* Alinear los elementos verticalmente */
-      align-items: center; /* Centrar horizontalmente los elementos */
-      text-align: center;
-      color: #000000;
+  .texto-imagen-contenedor ul li{
+    font-size: 1rem;
+    line-height: 1.1;
   }
-  .imagenes-row {
-      display: flex;
-      justify-content: space-evenly;
-      width: 100%;
-  }
-  .original-text{
-    font-size: 2rem !important;
-    text-align: center;
-    margin-top: 0% !important;
-    font-weight: 500;
-    font-family: 'League Spartan';
-    font-style: normal;
-  }
-  .hola123{
+  .cardTitle{
     font-size: 1.625rem;
-    margin-top: 40.5%;
-    width: 90%;
-    font-weight: 300;
-    font-family: 'League Spartan';
-    font-style: normal;
   }
-  
-  #imagen-estancia1 .texto-imagen-contenedor{
-    margin-top: 30%;
-    margin-left: 5%;
+  .cardDesc{
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width:1106px) and (max-width:1280px) {
+  .imagen-estancia{
+    width: 300px;
+  }
+  .imagen-estancia img{
+    width: 300px;
+  }
+  .imagenesEstancia{
+    width: 90%;
+  }
+  .imagenHover{
+    width: 300px;
+  }
+  .texto-imagen-contenedor h3{
+    font-size: 1.3rem;
+  }
+  .texto-imagen-contenedor ul li{
+    font-size: 1rem;
+  }
+  .cardTitle{
+    font-size: 1.75rem;
+  }
+  .cardDesc{
     font-size: 1.5rem;
-    font-weight: 500;
   }
-  #imagen-estancia2 .texto-imagen-contenedor{
-    margin-top: 45%;
-    margin-left:5%;
-    font-size: 1.625rem;
-    font-weight: 500;
-  }
-  #imagen-estancia3 .texto-imagen-contenedor{
-    margin-top: 20%;
-    margin-left: 0%;
-    font-size: 1.625rem;
-    font-weight: 500;
-  }
-  .texto-imagen-contenedor ul li {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    font-size: 1.1rem;
-    width: 100%;
-    line-height: 130%;
-    margin: auto;
-    font-weight: 300;
-  }
-    .texto-imagen-contenedor li {
-      width: 25%;
-      margin: auto;
-      display: flex;
-      font-weight: 300;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-   
-    }
-   
-   
-  .custom-shape-divider-bottom-1710877318 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-  .custom-shape-divider-bottom-1710877318 svg {
-    position: relative;
-    display: block;
-    width: calc(147% + 1.3px);
-    height: 20%;
-  }
-  .custom-shape-divider-bottom-1710877318 .shape-fill {
-    fill: #FFFFFF;
-  }
-    }
-  @media only screen and (min-width: 1195px) and (max-width: 1280px) {
-    .imagen-estancia {
-      position: relative;
-     
-    }
-  
-    #imagen-estancia1 .original-text{
-      margin-left: 20%;
-    }
-    #imagen-estancia2 .original-text{
-      margin-left: 15%;
-    }
-    #imagen-estancia3 .original-text{
-      margin-left: 7.5%;
-    } 
-    #imagen-estancia3 .hola123{
-      margin-left: -5%;
-    }
-    /* Ocultar texto por defecto al hacer hover */
-  .imagen-estancia:hover .original-text,
-  .imagen-estancia:hover .hola123 {
-    opacity: 0; /* Oculta el texto por defecto al hacer hover */
-  }
-   
-  /* Mostrar texto nuevo al hacer hover */
-  .imagen-estancia:hover .texto-imagen-contenedor {
-    opacity: 1;
-    z-index: 1001; /* Muestra el nuevo texto al hacer hover */
-  }
-   
-  .hover-text-visible .texto-imagen-contenedor {
-    opacity: 1; /* Mostrar por defecto */
-  }
-   
-  /* Aumentar la opacidad del filtro al hacer hover */
-  .imagen-estancia:hover::before {
-    opacity: 0.96; /* Opacidad del color de fondo al hacer hover */
-  }
-    /* Filtro de color con opacidad */
-  .imagen-estancia::before {
-    content: ""; /* Agrega un pseudo-elemento */
-    position: absolute; /* Posiciona el pseudo-elemento */
-    top: 0; /* Coloca el pseudo-elemento en la parte superior */
-    left: 0; /* Coloca el pseudo-elemento en la parte izquierda */
-    width: 270px;
-  
-    height: 450px; /* Altura completa del contenedor */
-    background-color: rgba(88, 33, 20); /* Color de fondo con transparencia */
-    z-index: 99; /* Mueve el pseudo-elemento detrás de las imágenes */
-    transition: opacity 0.3s ease; /* Agrega una transición suave para el cambio de opacidad */
-    opacity: 0.6; /* Opacidad por defecto */
-  }
-    /* Estilos para los textos por defecto */
-  .imagen-estancia .original-text,
-  .imagen-estancia .hola123 {
-    position: absolute;
-    top: 40%; /* Ajusta la posición vertical según tus necesidades */
-    left: 55%;
-    transform: translate(-50%, -50%);
-    color: white;
-    z-index: 999;
-    text-align: center;
-    width: 240px; /* Ancho del texto */
-    transition: opacity 0.3s ease; /* Transición suave de opacidad */
-    opacity: 1; /* Opacidad por defecto */
-  }
-    /* Estilos para los textos adicionales (texto-imagen-contenedor) */
-  .texto-imagen-contenedor {
-    position: absolute;
-    min-width: 100px;
-    width: 100%;
-    height: auto;
-    font-family: 'League Spartan';
-    font-style: 1.625rem;
-    align-items: center;
-    text-align: center;
-    top:0%;
-    color: #FFFFFF;
-    opacity: 0; /* Por defecto oculto */
-    transition: opacity 0.3s ease; /* Transición suave de opacidad */
-  }
-  .estanciasFotos {
-    background-color: #FCF9F5;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    /* Estilos generales */
-   .Estancias {
-    background-color: #FCF9F5;
-    width: 100%;
-    padding-bottom: 50px;
-    position: relative;
-    display: flex; /* Convertido en un contenedor flex */
-    flex-direction: column; /* Alinear los elementos verticalmente */
-    justify-content: center; /* Centrar verticalmente los elementos */
-    align-items: center; /* Centrar horizontalmente los elementos */
-  }
-    .imagen-estancia img {
-      width: 270px;
-      height: 450px;
-      object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
-    }
-    .tituloEstancias {
-      position: absolute;
-      font-family: 'League Spartan';
-      margin: 0 !important;
-      position: initial !important;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 2.5rem !important;
-      margin-top: 48.3438px;
-      margin-bottom: 48.3438px ;
-      color: #582114;
-  }
-    .subtituloEstancias {
-      width: 60% !important;
-      font-family: 'League Spartan';
-      margin: 0 !important;
-      position: initial;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 1.625rem !important;
-      line-height: 130% !important;
-      display: flex;
-      flex-direction: column; /* Alinear los elementos verticalmente */
-      align-items: center; /* Centrar horizontalmente los elementos */
-      text-align: center;
-      color: #000000;
-  }
-  .imagenes-row {
-      display: flex;
-      justify-content: space-evenly;
-      width: 100%;
-  }
-  .original-text{
-    font-size: 2rem !important;
-    text-align: center;
-    margin-top: 0% !important;
-    font-weight: 500;
-    font-family: 'League Spartan';
-    font-style: normal;
-  }
-  .hola123{
-    font-size: 1.625rem;
-    margin-top: 40.5%;
-    width: 90%;
-    font-weight: 300;
-    font-family: 'League Spartan';
-    font-style: normal;
-  }
-  
-  #imagen-estancia1 .texto-imagen-contenedor{
-    margin-top: 15%;
-    margin-left: 2.5%;
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-  #imagen-estancia2 .texto-imagen-contenedor{
-    margin-top: 45%;
-    margin-left: 2.5%;
-    font-size: 1.625rem;
-    font-weight: 500;
-  }
-  #imagen-estancia3 .texto-imagen-contenedor{
-    margin-top: 12.5%;
-    margin-left: -2.5%;
-    font-size: 1.625rem;
-    font-weight: 500;
-  }
-  .texto-imagen-contenedor ul li {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    font-size: 1.1rem;
-    width: 80%;
-    line-height: 130%;
-    margin: auto;
-    font-weight: 300;
-  }
-    .texto-imagen-contenedor li {
-      width: 25%;
-      margin: auto;
-      display: flex;
-      font-weight: 300;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-   
-    }
-   
-   
-  .custom-shape-divider-bottom-1710877318 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-  .custom-shape-divider-bottom-1710877318 svg {
-    position: relative;
-    display: block;
-    width: calc(147% + 1.3px);
-    height: 20%;
-  }
-  .custom-shape-divider-bottom-1710877318 .shape-fill {
-    fill: #FFFFFF;
-  }
-    }
-   
-  @media only screen and (min-width: 601px) and (max-width: 1023px) {
-    .Estancias{
-      display: none;
-    }
-  }
-   
-  @media only screen and (max-width: 600px) {
-    .Estancias{
-      display: none;
-    }
-  }
-
-  @media only screen and (min-width: 1281px){
-    .imagen-estancia {
-      position: relative;
-     
-    }
-
-    #imagen-estancia1 .original-text{
-      margin-left: 22.5%;
-    }
-    #imagen-estancia2 .original-text{
-      margin-left: 20%;
-    }
-    #imagen-estancia3 .original-text{
-      margin-left: 15%;
-    }
-    /* Ocultar texto por defecto al hacer hover */
-  .imagen-estancia:hover .original-text,
-  .imagen-estancia:hover .hola123 {
-    opacity: 0; /* Oculta el texto por defecto al hacer hover */
-  }
-   
-  /* Mostrar texto nuevo al hacer hover */
-  .imagen-estancia:hover .texto-imagen-contenedor {
-    opacity: 1;
-    z-index: 1001; /* Muestra el nuevo texto al hacer hover */
-  }
-   
-  /* Clase para manejar la visibilidad de texto-imagen-contenedor */
-  .hover-text-visible .texto-imagen-contenedor {
-    opacity: 1; /* Mostrar por defecto */
-  }
-   
-  /* Aumentar la opacidad del filtro al hacer hover */
-  .imagen-estancia:hover::before {
-    opacity: 0.96; /* Opacidad del color de fondo al hacer hover */
-  }
-    /* Filtro de color con opacidad */
-  .imagen-estancia::before {
-    content: ""; /* Agrega un pseudo-elemento */
-    position: absolute; /* Posiciona el pseudo-elemento */
-    top: 0; /* Coloca el pseudo-elemento en la parte superior */
-    left: 0; /* Coloca el pseudo-elemento en la parte izquierda */
-    width: 350px; /* Ancho completo del contenedor */
-    height: 100%; /* Altura completa del contenedor */
-    background-color: rgba(88, 33, 20); /* Color de fondo con transparencia */
-    z-index: 99; /* Mueve el pseudo-elemento detrás de las imágenes */
-    transition: opacity 0.3s ease; /* Agrega una transición suave para el cambio de opacidad */
-    opacity: 0.6; /* Opacidad por defecto */
-  }
-    /* Estilos para los textos por defecto */
-  .imagen-estancia .original-text,
-  .imagen-estancia .hola123 {
-    position: absolute;
-    top: 50%; /* Ajusta la posición vertical según tus necesidades */
-    left: 45%;
-    transform: translate(-50%, -50%);
-    color: white;
-    z-index: 999;
-    padding: 10px;
-    text-align: center;
-    width: 80%; /* Ancho del texto */
-    transition: opacity 0.3s ease; /* Transición suave de opacidad */
-    opacity: 1; /* Opacidad por defecto */
-  }
-    /* Estilos para los textos adicionales (texto-imagen-contenedor) */
-  .texto-imagen-contenedor {
-    position: absolute;
-    min-width: 100px;
-    width: 100%;
-    font-family: 'League Spartan';
-    font-style: 1.625rem;
-    align-items: center;
-    text-align: center;
-    top:0%;
-    color: #FFFFFF;
-    opacity: 0; /* Por defecto oculto */
-    transition: opacity 0.3s ease; /* Transición suave de opacidad */
-  }
-  .estanciasFotos {
-    background-color: #FCF9F5;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    /* Estilos generales */
-   .Estancias {
-    background-color: #FCF9F5;
-    width: 100%;
-    
-    position: relative;
-    display: flex; /* Convertido en un contenedor flex */
-    flex-direction: column; /* Alinear los elementos verticalmente */
-    justify-content: center; /* Centrar verticalmente los elementos */
-    align-items: center; /* Centrar horizontalmente los elementos */
-  }
-    .imagen-estancia img {
-      width: 350px; /* Ancho completo del contenedor */
-      height: 100%;
-      object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
-    }
-    .tituloEstancias {
-      position: absolute;
-      font-family: 'League Spartan';
-      margin: 0 !important;
-      position: initial !important;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 2.5rem !important;
-      margin-top: 48.3438px;
-      margin-bottom: 48.3438px ;
-      color: #582114;
-  }
-    .subtituloEstancias {
-      width: 60% !important;
-      font-family: 'League Spartan';
-      margin: 0 !important;
-      position: initial;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 1.625rem !important;
-      line-height: 130% !important;
-      display: flex;
-      flex-direction: column; /* Alinear los elementos verticalmente */
-      align-items: center; /* Centrar horizontalmente los elementos */
-      text-align: center;
-      color: #000000;
-  }
-  .imagenes-row {
-      display: flex;
-      justify-content: space-evenly;
-      margin-top: 48.3438px;
-      width: 100%;
-      height: 60%;
-      padding-bottom: 50px;
-  }
-  .original-text{
-    font-size: 2rem !important;
-    text-align: center;
-    margin-top: 10% !important;
-    font-weight: 500;
-    font-family: 'League Spartan';
-    font-style: normal;
-  }
-  .hola123{
-    font-size: 1.625rem;
-    margin-top: 40.5%;
-    width: 90%;
-    font-weight: 300;
-    font-family: 'League Spartan';
-    font-style: normal;
-  }
-  #imagen-estancia1 .texto-imagen-contenedor{
-    margin-top: 15%;
-    font-size: 1.625rem;
-    font-weight: 500;
-    margin-left: -5%;
-  }
-  #imagen-estancia1 .hola123{
-    margin-top: 30%;
-  }
-  #imagen-estancia2 .texto-imagen-contenedor{
-    margin-top: 30%;
-    font-size: 1.625rem;
-    font-weight: 500;
-    margin-left: -5%;
-  }
-  #imagen-estancia2 .hola123{
-    margin-top: 30%;
-  }
-  #imagen-estancia3 .texto-imagen-contenedor{
-    margin-top: 12.5%;
-    font-size: 1.625rem;
-    font-weight: 500;
-    margin-left: -10%;
-  }
-  #imagen-estancia3 .hola123{
-    margin-left: -5%;
-    margin-top: 30%;
-  }
-  .texto-imagen-contenedor ul li {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    font-size: 1.1rem;
-    width: 80%;
-    line-height: 130%;
-    margin: auto;
-    font-weight: 300;
-  }
-    .texto-imagen-contenedor li {
-      width: 25%;
-      margin: auto;
-      display: flex;
-      font-weight: 300;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-   
-    }
-   
-   
-  .custom-shape-divider-bottom-1710877318 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-  .custom-shape-divider-bottom-1710877318 svg {
-    position: relative;
-    display: block;
-    width: calc(147% + 1.3px);
-    height: 20%;
-  }
-  .custom-shape-divider-bottom-1710877318 .shape-fill {
-    fill: #FFFFFF;
-  }
-  }
-  @media only screen and (width: 1024px) {
-    .imagen-estancia {
-      position: relative;
-     
-    }
-  
-    #imagen-estancia1 .original-text{
-      margin-top: 10% !important;
-      margin-left: 40%;
-    }
-    #imagen-estancia1 .hola123{
-      margin-top: 50% !important;
-      margin-left: 12.5%;
-    }
-    #imagen-estancia2 .original-text{
-      margin-left: 30%;
-      margin-top: 10% !important;
-    }
-    #imagen-estancia2 .hola123{
-      margin-left: 10%;
-      margin-top: 55% !important;
-    }
-    #imagen-estancia3 .original-text{
-      margin-top: 10% !important;
-      margin-left: 20%;
-    } 
-    #imagen-estancia3 .hola123{
-      margin-left: 5%;
-      margin-top: 50% !important;
-    }
-    /* Ocultar texto por defecto al hacer hover */
-  .imagen-estancia:hover .original-text,
-  .imagen-estancia:hover .hola123 {
-    opacity: 0; /* Oculta el texto por defecto al hacer hover */
-  }
-   
-  /* Mostrar texto nuevo al hacer hover */
-  .imagen-estancia:hover .texto-imagen-contenedor {
-    opacity: 1;
-    z-index: 1001; /* Muestra el nuevo texto al hacer hover */
-  }
-   
-  .hover-text-visible .texto-imagen-contenedor {
-    opacity: 1; /* Mostrar por defecto */
-  }
-   
-  /* Aumentar la opacidad del filtro al hacer hover */
-  .imagen-estancia:hover::before {
-    opacity: 0.96; /* Opacidad del color de fondo al hacer hover */
-  }
-    /* Filtro de color con opacidad */
-  .imagen-estancia::before {
-    content: ""; /* Agrega un pseudo-elemento */
-    position: absolute; /* Posiciona el pseudo-elemento */
-    top: 0; /* Coloca el pseudo-elemento en la parte superior */
-    left: 0; /* Coloca el pseudo-elemento en la parte izquierda */
-    width: 270px;
-  
-    height: 450px; /* Altura completa del contenedor */
-    background-color: rgba(88, 33, 20); /* Color de fondo con transparencia */
-    z-index: 99; /* Mueve el pseudo-elemento detrás de las imágenes */
-    transition: opacity 0.3s ease; /* Agrega una transición suave para el cambio de opacidad */
-    opacity: 0.6; /* Opacidad por defecto */
-  }
-    /* Estilos para los textos por defecto */
-  .imagen-estancia .original-text,
-  .imagen-estancia .hola123 {
-    position: absolute;
-    top: 40%; /* Ajusta la posición vertical según tus necesidades */
-    left: 55%;
-    transform: translate(-50%, -50%);
-    color: white;
-    z-index: 999;
-    text-align: center;
-    width: 240px; /* Ancho del texto */
-    transition: opacity 0.3s ease; /* Transición suave de opacidad */
-    opacity: 1; /* Opacidad por defecto */
-  }
-    /* Estilos para los textos adicionales (texto-imagen-contenedor) */
-  .texto-imagen-contenedor {
-    position: absolute;
-    min-width: 100px;
-    width: 100%;
-    height: auto;
-    font-family: 'League Spartan';
-    font-style: 1.625rem;
-    align-items: center;
-    text-align: center;
-    top:0%;
-    color: #FFFFFF;
-    opacity: 0; /* Por defecto oculto */
-    transition: opacity 0.3s ease; /* Transición suave de opacidad */
-  }
-  .estanciasFotos {
-    background-color: #FCF9F5;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    /* Estilos generales */
-   .Estancias {
-    background-color: #FCF9F5;
-    width: 100%;
-    padding-bottom: 50px;
-    position: relative;
-    display: flex; /* Convertido en un contenedor flex */
-    flex-direction: column; /* Alinear los elementos verticalmente */
-    justify-content: center; /* Centrar verticalmente los elementos */
-    align-items: center; /* Centrar horizontalmente los elementos */
-  }
-    .imagen-estancia img {
-      width: 270px;
-      height: 450px;
-      object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
-    }
-    .tituloEstancias {
-      position: absolute;
-      font-family: 'League Spartan';
-      margin: 0 !important;
-      position: initial !important;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 2.5rem !important;
-      margin-top: 48.3438px;
-      margin-bottom: 48.3438px ;
-      color: #582114;
-  }
-    .subtituloEstancias {
-      width: 60% !important;
-      font-family: 'League Spartan';
-      margin: 0 !important;
-      position: initial;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 1.625rem !important;
-      line-height: 130% !important;
-      display: flex;
-      flex-direction: column; /* Alinear los elementos verticalmente */
-      align-items: center; /* Centrar horizontalmente los elementos */
-      text-align: center;
-      color: #000000;
-  }
-  .imagenes-row {
-      display: flex;
-      justify-content: space-evenly;
-      width: 100%;
-  }
-  .original-text{
-    font-size: 2rem !important;
-    text-align: center;
-    margin-top: 0% !important;
-    font-weight: 500;
-    font-family: 'League Spartan';
-    font-style: normal;
-  }
-  .hola123{
-    font-size: 1.625rem;
-    margin-top: 40.5%;
-    width: 90%;
-    font-weight: 300;
-    font-family: 'League Spartan';
-    font-style: normal;
-  }
-  
-  #imagen-estancia1 .texto-imagen-contenedor{
-    margin-top: 20%;
-    margin-left: 15%;
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-  #imagen-estancia2 .texto-imagen-contenedor{
-    margin-top: 45%;
-    margin-left:15%;
-    font-size: 1.625rem;
-    font-weight: 500;
-  }
-  #imagen-estancia3 .texto-imagen-contenedor{
-    margin-top: 15%;
-    margin-left: 10%;
-    font-size: 1.625rem;
-    font-weight: 500;
-  }
-  .texto-imagen-contenedor ul li {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    font-size: 1.1rem;
-    width: 100%;
-    line-height: 130%;
-    margin: auto;
-    font-weight: 300;
-  }
-    .texto-imagen-contenedor li {
-      width: 25%;
-      margin: auto;
-      display: flex;
-      font-weight: 300;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-   
-    }
-   
-   
-  .custom-shape-divider-bottom-1710877318 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-  .custom-shape-divider-bottom-1710877318 svg {
-    position: relative;
-    display: block;
-    width: calc(147% + 1.3px);
-    height: 20%;
-  }
-  .custom-shape-divider-bottom-1710877318 .shape-fill {
-    fill: #FFFFFF;
-  }
-    }
+}

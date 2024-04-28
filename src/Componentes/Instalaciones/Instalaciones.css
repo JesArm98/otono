@@ -1,21 +1,17 @@
 .Instalaciones{
     background-color: #FCF9F5;
     width: 100%;
-     min-height: 80px !important;
     position:relative;
     display: flex;
     flex-direction: column;
-    margin:"auto"
-    
+
+
 }
 
 .crsl {
     width: auto;
     margin:auto;
     text-align: center;
-    
-    
-   
 }
 
 .legend {
