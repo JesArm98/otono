@@ -158,7 +158,7 @@ function Footer() {
         {/* Aquí puedes colocar el contenido del aviso de privacidad */}
         <div
           className="dialogPrivacidad"
-          style={{ padding: "60px", textAlign: "center" }}
+          style={{ padding: "60px", textAlign: "justify" }}
         >
           <p id="avisoPrivacidad">AVISO DE PRIVACIDAD CASA OTOÑO</p>
           <br></br>
