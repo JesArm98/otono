@@ -25,6 +25,8 @@ function Navbar() {
     return `rgb(${r}, ${g}, ${b})`;
   };
 
+  console.log("Pagina web desarrollada por Jesus Armando")
+
   const listenScrollEvent = () => {
     const scrollY = window.scrollY;
     const opacity = Math.min(scrollY / 800, 1); // Ajusta para controlar la rapidez del cambio
